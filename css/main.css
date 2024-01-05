@@ -1,19 +1,56 @@
 .main-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: relative;
   background: white;
-  background: url(/img/main_bg.jpg) center no-repeat;
-  background-size: cover;
-  padding: 90px 70px;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  overflow: hidden;
 }
-.main-page:before {
+.main-page .scroll-space {
+  position: relative;
+}
+.main-page .scroll-space > div:first-of-type {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.main-page .scroll-space > div:first-of-type .white-bg {
+  background: white;
+  width: 100%;
+  height: 50%;
+}
+.main-page .scroll-space > div:first-of-type .title {
+  position: absolute;
+  margin-left: 60%;
+  padding: 0 40px;
+  white-space: nowrap;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.916;
+  transform: translateY(-120%);
+}
+@media screen and (max-width: 767px) {
+  .main-page .scroll-space > div:first-of-type .title {
+    margin: 0 20px;
+    font-size: 100rem;
+    line-height: 0.9;
+  }
+}
+.main-page .scroll-space > div:last-of-type {
+  width: 100%;
+  height: 50vh;
+}
+.main-page .bg-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120vh;
+  transform: translate(-50%, -50%);
+  background: url(/img/main_bg.jpg) center bottom no-repeat;
+  background-size: cover;
+}
+.main-page .bg-wrap:before {
   display: block;
   content: " ";
   position: fixed;
@@ -25,7 +62,19 @@
   background-size: cover;
   z-index: -1;
 }
-.main-page h1 {
+.main-page .txt-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 90px 70px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.main-page .txt-wrap h1 {
   margin-top: 20vh;
   color: #000;
   font-family: Pretendard;
@@ -33,16 +82,18 @@
   font-style: normal;
   font-weight: 600;
   line-height: 0.916;
+  opacity: 0;
 }
-.main-page p.text {
+.main-page .txt-wrap p.text {
   color: #000;
   font-family: Pretendard;
   font-size: 48px;
   font-style: normal;
   font-weight: 300;
   line-height: 54px;
+  opacity: 0;
 }
-.main-page p.copyright {
+.main-page .txt-wrap p.copyright {
   position: fixed;
   right: 70px;
   bottom: 55px;
@@ -54,21 +105,21 @@
   line-height: 20px;
 }
 @media screen and (max-width: 767px) {
-  .main-page {
+  .main-page .txt-wrap {
     padding: 0 20px 150rem;
     justify-content: flex-end;
   }
-  .main-page h1 {
+  .main-page .txt-wrap h1 {
     margin: 0;
     font-size: 100rem;
     line-height: 0.9;
   }
-  .main-page p.text {
+  .main-page .txt-wrap p.text {
     margin-top: 40rem;
     font-size: 58rem;
     line-height: 1.08;
   }
-  .main-page p.copyright {
+  .main-page .txt-wrap p.copyright {
     right: 40rem;
     bottom: 40rem;
   }

@@ -6,12 +6,20 @@ a {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
 html body {
   overscroll-behavior: none;
+}
+html body.loading {
+  opacity: 0;
 }
 html header {
   position: fixed;

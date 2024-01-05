@@ -69,9 +69,19 @@ menuToggle.addEventListener("click", function () {
   tl.reversed(!tl.reversed());
 });
 
-document.querySelector(".btn-top").addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // 부드러운 스크롤 효과
+if (document.querySelector(".btn-top")) {
+  document.querySelector(".btn-top").addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 부드러운 스크롤 효과
+    });
   });
-});
+}
+
+setTimeout(function () {
+  document.body.classList.remove("loading");
+
+  if (window.AOS) {
+    AOS.init();
+  }
+}, 100);
