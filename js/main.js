@@ -1,0 +1,77 @@
+var menuToggle = document.querySelector(".toggle-menu-btn");
+
+// 메뉴바
+var menuBar = gsap.timeline();
+
+menuBar.to(
+  ".bar",
+  1,
+  {
+    stroke: "white",
+    ease: Power2.easeOut,
+  },
+  "start"
+);
+
+menuBar.to(
+  ".bar-v",
+  0.5,
+  {
+    attr: { x1: 13, x2: 13 },
+    ease: Power2.easeInOut,
+  },
+  "start"
+);
+
+menuBar.to(
+  ".bar-h",
+  0.5,
+  {
+    attr: { y1: 13, y2: 13 },
+    ease: Power2.easeInOut,
+  },
+  "start"
+);
+
+menuBar.to(".toggle-menu-btn", 0.2, { rotation: 45 }, 0.4);
+menuBar.reverse();
+
+// 풀페이지 메뉴
+var tl = gsap.timeline({ paused: true });
+tl.to(".fullpage-menu", {
+  duration: 0,
+  display: "block",
+  ease: "Expo.easeInOut",
+});
+
+tl.from(".menu-bg span", {
+  duration: 1,
+  x: "100%",
+  stagger: 0.1,
+  ease: "Expo.easeInOut",
+});
+
+tl.from(
+  ".main-menu li a",
+  {
+    duration: 1.5,
+    y: "100%",
+    stagger: 0.2,
+    ease: "Expo.easeInOut",
+  },
+  "-=0.5"
+);
+
+tl.reverse();
+
+menuToggle.addEventListener("click", function () {
+  menuBar.reversed(!menuBar.reversed());
+  tl.reversed(!tl.reversed());
+});
+
+document.querySelector(".btn-top").addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // 부드러운 스크롤 효과
+  });
+});

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABOARD</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/work.css">
+
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollToPlugin.min.js"
+        integrity="sha512-gXXZigEOXAVnGZ2otmK1DqTFK/vF87A+x6Owjf5CN+zVxcg9bLg3F6J1s9yGnFFT08QLt7G0vI3XNWJVue260w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"
+        integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo">ABOARD</a>
+        <div class="menu-area">
+            <nav>
+                <a href="/about.html">ABOUT</a>
+                <a href="/work.html">WORK</a>
+                <a href="/contact.html">CONTACT</a>
+            </nav>
+            <section class="fullpage-menu">
+                <div class="fullpage-menu-inner">
+                    <div class="menu-bg">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav>
+                        <ul class="main-menu">
+                            <li><a href="/about.html">About</a></li>
+                            <li><a href="/work.html">Work</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <button class="toggle-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <line x1="1" y1="17" x2="1" y2="25" class="bar bar-v" />
+                    <line x1="9" y1="9" x2="9" y2="17" class="bar bar-v" />
+                    <line x1="17" y1="1" x2="17" y2="9" class="bar bar-v" />
+                    <line x1="1" y1="17" x2="9" y2="17" class="bar bar-h" />
+                    <line x1="9" y1="9" x2="17" y2="9" class="bar bar-h" />
+                    <line x1="17" y1="1" x2="25" y2="1" class="bar bar-h" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="work-page">
+            <img src="/img/work_bg.png" class="w100">
+            <ul class="work-list">
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/01.jpg" alt="LOTTE EBC #1 이미지">
+                    </div>
+                    <p class="title">LOTTE EBC #1</p>
+                    <p class="txt">Lotte Executive Briefing Center : WELCOME</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/02.jpg" alt="LOTTE EBC #2 이미지">
+                    </div>
+                    <p class="title">LOTTE EBC #2</p>
+                    <p class="txt">Lotte Executive Briefing Center : WELCOME</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/03.jpg" alt="LOTTE EBC #1 이미지">
+                    </div>
+                    <p class="title">MOBIS CES</p>
+                    <p class="txt">Hyundai Mobis CES Show 2023</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/04.jpg" alt="LOTTE EBC #2 이미지">
+                    </div>
+                    <p class="title">STANDARD ENERGY</p>
+                    <p class="txt">Lighting Control System</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/05.jpg" alt="LOTTE EBC #1 이미지">
+                    </div>
+                    <p class="title">CLEANTOPIA</p>
+                    <p class="txt">Service App GUI Design</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/06.jpg" alt="LOTTE EBC #2 이미지">
+                    </div>
+                    <p class="title">AMWAY</p>
+                    <p class="txt">Amway Kiosk GUI Design</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/07.jpg" alt="LOTTE EBC #1 이미지">
+                    </div>
+                    <p class="title">MOBIS PLATFORM</p>
+                    <p class="txt">Hyundai Mobis B to B Service Platform</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/08.jpg" alt="LOTTE EBC #2 이미지">
+                    </div>
+                    <p class="title">MOBIS SHOWROOM</p>
+                    <p class="txt">Hyundai Mobis Virtual Showroom</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/09.jpg" alt="LOTTE EBC #1 이미지">
+                    </div>
+                    <p class="title">SEOSA</p>
+                    <p class="txt">Seosa App Film Contents</p>
+                </li>
+                <li>
+                    <div class="thumb-wrap">
+                        <img src="/img/works/10.jpg" alt="LOTTE EBC #2 이미지">
+                    </div>
+                    <p class="title">LG DISPLAY</p>
+                    <p class="txt">LG Display Virtual Exhibition</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <span class="copyright">©2023 ABOARD.</span>
+        <button class="btn-top">TOP</button>
+    </footer>
+    <script src="/js/main.js"></script>
+    <!-- <script src="/js/imagesLoaded.js"></script> -->
+    <script src="/js/work.js"></script>
+</body>
+
+</html>

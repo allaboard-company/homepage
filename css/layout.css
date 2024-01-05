@@ -1,0 +1,220 @@
+a {
+  text-decoration: none;
+}
+
+.w100 {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+html body {
+  overscroll-behavior: none;
+}
+html header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+  padding: 0 70px;
+  box-sizing: border-box;
+}
+html header .logo {
+  color: black;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+html header .menu-area > nav a {
+  position: relative;
+  margin-right: 40px;
+  color: black;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+html header .menu-area > nav a::before {
+  display: block;
+  content: " ";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  html header .menu-area > nav a:hover {
+    transform: translateY(-10px);
+    padding-bottom: 10px;
+  }
+  html header .menu-area > nav a:hover::before {
+    opacity: 1;
+  }
+}
+html header .menu-area {
+  display: flex;
+  align-items: center;
+}
+html header .menu-area .toggle-menu-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 101;
+}
+html header .menu-area .toggle-menu-btn line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-width: 2px;
+}
+html header .menu-area .toggle-menu-btn svg {
+  width: 100%;
+  height: 100%;
+}
+html footer {
+  position: relative;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html footer .copyright {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+html footer .btn-top {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 21px 10px 10px;
+  background: none;
+  border: none;
+  background: url(/img/btn_top.svg) center right no-repeat;
+  background-size: 14px 9px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  html footer {
+    height: 120rem;
+  }
+  html footer .copyright {
+    font-size: 24rem;
+  }
+  html footer .btn-top {
+    right: 55rem;
+    font-size: 24rem;
+    padding: 10rem 21rem 10rem 10rem;
+    background-size: 14rem 9rem;
+  }
+}
+
+.fullpage-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  z-index: 100;
+}
+.fullpage-menu .fullpage-menu-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 100px 60px;
+  box-sizing: border-box;
+}
+.fullpage-menu .menu-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.fullpage-menu .menu-bg span {
+  height: 33.334%;
+  width: 100%;
+  background: black;
+  display: block;
+}
+.fullpage-menu nav {
+  position: relative;
+  z-index: 10;
+}
+.fullpage-menu nav li {
+  margin: 60px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out 0s;
+  text-align: center;
+}
+.fullpage-menu nav li a {
+  font-size: 80px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 1;
+  font-family: Noto Sans;
+}
+.fullpage-menu nav li:hover {
+  opacity: 0.8;
+}
+.fullpage-menu nav li + li {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 0.1388vw;
+  }
+  header {
+    margin: 0 !important;
+    padding: 40rem !important;
+  }
+  header .menu-area > nav {
+    display: none;
+  }
+  header .fullpage-menu {
+    padding: 0;
+  }
+  header .fullpage-menu nav {
+    display: flex;
+    gap: 160rem;
+  }
+  header .fullpage-menu nav li a {
+    font-size: 100rem;
+  }
+}/*# sourceMappingURL=layout.css.map */

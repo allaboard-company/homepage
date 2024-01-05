@@ -1,0 +1,185 @@
+@media screen and (min-width: 768px) {
+  .work-page ul {
+    margin-top: 80px;
+    padding: 0 40px;
+    max-width: 1520px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 80px auto;
+    overflow: hidden;
+  }
+  .work-page ul li {
+    margin-top: -13.1%;
+    width: 48.5%;
+  }
+  .work-page ul li:first-of-type {
+    margin-top: 0;
+  }
+  .work-page ul li .thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 128.57%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .work-page ul li .thumb-wrap::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: " ";
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .work-page ul li .thumb-wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .work-page ul li .thumb-wrap:hover img {
+    width: 101%;
+  }
+  .work-page ul li .title {
+    padding: 0 40px;
+    color: #000;
+    font-family: Pretendard;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.027;
+    margin-top: -38px;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .work-page ul li .title {
+    margin-top: -27px;
+    padding-left: 29px;
+    font-size: 51px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .work-page ul li .title {
+    margin-top: -25px;
+    padding-left: 27px;
+    font-size: 47px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .work-page ul li .title {
+    margin-top: -23px;
+    padding-left: 25px;
+    font-size: 43px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .work-page ul li .title {
+    margin-top: -21px;
+    padding-left: 23px;
+    font-size: 39px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .work-page ul li .txt {
+    padding-left: 40px;
+    color: #000;
+    font-family: Pretendard;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.375;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .work-page ul li .txt {
+    padding-left: 29px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .work-page ul li .txt {
+    padding-left: 27px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .work-page ul li .txt {
+    padding-left: 25px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .work-page ul li .txt {
+    padding-left: 23px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .work-page ul li:nth-of-type(even) {
+    margin-left: 51.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-page ul {
+    margin-top: 57rem;
+    padding: 0 40rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .work-page ul li {
+    margin-bottom: 180rem;
+    width: 100%;
+  }
+  .work-page ul li .thumb-wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 128.57%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .work-page ul li .thumb-wrap::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: " ";
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .work-page ul li .thumb-wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .work-page ul li .thumb-wrap:hover img {
+    width: 101%;
+  }
+  .work-page ul li .title {
+    color: #000;
+    font-size: 58rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.17241;
+    margin-top: -29rem;
+    white-space: nowrap;
+  }
+  .work-page ul li .txt {
+    color: #000;
+    font-family: Pretendard;
+    font-size: 32rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.375;
+  }
+}/*# sourceMappingURL=work.css.map */
