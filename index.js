@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 var t1 = gsap.timeline();
 
 // t1.to("body", {
@@ -11,10 +9,24 @@ var t1 = gsap.timeline();
 
 t1.to(".bg-wrap", {
   scrollTrigger: {
+    trigger: ".scroll-space",
+    // pin: true,
+    start: "0",
+    end: "200",
+    // markers: true,
+    scrub: true,
+    invalidateOnRefresh: true,
+  },
+  top: "50%",
+  ease: "linear",
+});
+
+t1.to(".bg-wrap", {
+  scrollTrigger: {
     trigger: ".scroll-space .white-bg",
     // pin: true,
-    start: "100",
-    end: "300",
+    start: "200",
+    end: "400",
     // markers: true,
     scrub: true,
     invalidateOnRefresh: true,
@@ -40,13 +52,26 @@ t1.to(".title", {
   },
 });
 
-t1.to("h1, .text", {
+t1.to("h1", {
   opacity: 1,
   scrollTrigger: {
     trigger: ".scroll-space .white-bg",
     // pin: true,
     start: "200",
     end: "500",
+    // markers: true,
+    scrub: true,
+    invalidateOnRefresh: true,
+  },
+});
+
+t1.to(".text", {
+  opacity: 1,
+  scrollTrigger: {
+    trigger: ".scroll-space .white-bg",
+    // pin: true,
+    start: "300",
+    end: "600",
     // markers: true,
     scrub: true,
     invalidateOnRefresh: true,

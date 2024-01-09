@@ -12,8 +12,10 @@ a {
   }
 }
 html {
-  scroll-behavior: smooth;
   height: 100%;
+}
+html ::-webkit-scrollbar {
+  display: none;
 }
 html body {
   overscroll-behavior: none;
@@ -225,4 +227,24 @@ html footer .btn-top {
   header .fullpage-menu nav li a {
     font-size: 100rem;
   }
+}
+/* Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }/*# sourceMappingURL=layout.css.map */

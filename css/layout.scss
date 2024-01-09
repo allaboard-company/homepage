@@ -13,8 +13,11 @@ a {
 }
 
 html {
-  scroll-behavior: smooth;
   height: 100%;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   body {
     overscroll-behavior: none;
@@ -256,4 +259,25 @@ html {
       }
     }
   }
+}
+
+/* Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

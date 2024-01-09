@@ -118,8 +118,8 @@
   .about-page .sec4 .circles li {
     width: 360px;
     height: 360px;
-    border-radius: 50%;
-    border: 1px solid white;
+    background: url(/img/about_circle.svg) center no-repeat;
+    background-size: cover;
     color: white;
     display: flex;
     align-items: center;
