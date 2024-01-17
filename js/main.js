@@ -116,3 +116,18 @@ if (window.Lenis) {
 
   gsap.ticker.lagSmoothing(0);
 }
+
+gsap.utils.toArray(".stair-item").forEach((item) => {
+  gsap.to(item, {
+    yPercent: -50,
+    ease: "none",
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: item,
+      start: "top bottom",
+      end: "bottom top",
+      // markers: true,
+      scrub: 0.5,
+    },
+  });
+});

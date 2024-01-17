@@ -8,8 +8,15 @@
     position: relative;
     width: 100%;
     height: 720px;
-    background: url(/img/about_01.jpg) center no-repeat;
+    background: url(/img/about_01.png) center no-repeat;
     background-size: cover;
+  }
+  .about-page .sec1 .stair-item {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 36vw;
+    height: auto;
   }
   .about-page .sec1 h1 {
     color: #000;
@@ -48,14 +55,31 @@
     box-sizing: border-box;
   }
   .about-page .sec2 .obj-wrap .img1 {
-    width: 56.25%;
+    width: 62.96%;
+    float: right;
+  }
+  .about-page .sec2 .obj-wrap .stair-item {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    width: 36vw;
+    height: auto;
+    transform: rotate(90deg);
   }
   .about-page .sec2 .obj-wrap .txt2 {
     margin-bottom: -200px;
     max-width: 568px;
   }
   .about-page .sec3 {
+    position: relative;
     padding: 180px 0;
+  }
+  .about-page .sec3 .stair-item {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 36vw;
+    height: auto;
   }
   .about-page .sec3 .txt1 {
     margin: 0 auto;
@@ -156,6 +180,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .about-page .stair-item {
+    display: none;
+  }
   .about-page .container {
     margin: 0 auto;
     width: 100%;
@@ -166,7 +193,7 @@
     position: relative;
     width: 100%;
     height: 40.5vw;
-    background: url(/img/about_01.jpg) center top no-repeat;
+    background: url(/img/about_01.png) center top no-repeat;
     background-size: contain;
     padding-bottom: 130rem;
   }
