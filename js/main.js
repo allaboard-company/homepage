@@ -84,7 +84,7 @@ setTimeout(function () {
   if (window.AOS) {
     AOS.init();
   }
-}, 100);
+}, 200);
 
 if (window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
