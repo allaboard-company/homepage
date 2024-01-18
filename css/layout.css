@@ -11,14 +11,8 @@ a {
     transition-delay: 0 !important;
   }
 }
-html {
-  height: 100%;
-}
 html ::-webkit-scrollbar {
   display: none;
-}
-html body {
-  overscroll-behavior: none;
 }
 html body.loading {
   opacity: 0;
@@ -34,6 +28,7 @@ html header {
   justify-content: space-between;
   margin-top: 55px;
   padding: 0 70px;
+  height: 40px;
   box-sizing: border-box;
 }
 html header .logo {
@@ -235,23 +230,23 @@ html footer .btn-top {
     font-size: 100rem;
   }
 }
-/* Lenis */
-html.lenis {
-  height: auto;
+.show-full-popup header {
+  width: auto;
+}
+.show-full-popup header .menu-area {
+  display: none;
 }
 
+/* Lenis */
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }/*# sourceMappingURL=layout.css.map */

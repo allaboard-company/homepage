@@ -13,15 +13,11 @@ a {
 }
 
 html {
-  height: 100%;
-
   ::-webkit-scrollbar {
     display: none;
   }
 
   body {
-    overscroll-behavior: none;
-
     &.loading {
       opacity: 0;
     }
@@ -38,6 +34,7 @@ html {
     justify-content: space-between;
     margin-top: 55px;
     padding: 0 70px;
+    height: 40px;
     box-sizing: border-box;
 
     .logo {
@@ -273,23 +270,31 @@ html {
   }
 }
 
+.show-full-popup {
+  header {
+    width: auto;
+
+    .menu-area {
+      display: none;
+    }
+  }
+}
+
 /* Lenis */
-html.lenis {
-  height: auto;
-}
+.lenis {
+  &.lenis-smooth {
+    scroll-behavior: auto;
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
+    [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+  }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+  &.lenis-stopped {
+    overflow: hidden;
+  }
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
+  &.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 }

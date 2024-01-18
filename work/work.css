@@ -1,4 +1,11 @@
 @media screen and (min-width: 768px) {
+  .work-page .stair-item {
+    position: absolute;
+    top: -5vw;
+    left: 12%;
+    width: 36.14vw;
+    height: auto;
+  }
   .work-page ul {
     margin-top: 80px;
     padding: 0 40px;
@@ -36,10 +43,10 @@
   }
   .work-page ul li .thumb-wrap img {
     position: absolute;
-    bottom: -10%;
-    left: 50%;
-    width: 110%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     z-index: -1;
@@ -127,6 +134,9 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .work-page .stair-item {
+    display: none;
+  }
   .work-page ul {
     margin-top: 57rem;
     padding: 0 40rem;
@@ -196,7 +206,7 @@
   right: 0;
   bottom: 0;
   background-color: white;
-  z-index: 100;
+  z-index: 99;
 }
 .work-detail-page .btn-close {
   position: fixed;
@@ -207,4 +217,6 @@
   background: url(/img/btn_close.svg) center no-repeat;
   outline: none;
   border: none;
+  z-index: 9;
+  cursor: pointer;
 }/*# sourceMappingURL=work.css.map */

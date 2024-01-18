@@ -78,43 +78,32 @@ if (document.querySelector(".btn-top")) {
   });
 }
 
-setTimeout(function () {
+function init() {
   document.body.classList.remove("loading");
 
   if (window.AOS) {
     AOS.init();
   }
-}, 200);
 
-if (window.ScrollTrigger) {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
-if (window.Lenis) {
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-    direction: "vertical",
-    gestureDirection: "vertical",
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  if (window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
   }
 
-  requestAnimationFrame(raf);
+  if (window.ScrollTrigger && window.Lenis) {
+    const lenis = new Lenis();
 
-  lenis.on("scroll", ScrollTrigger.update);
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
 
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
+    lenis.on("scroll", ScrollTrigger.update);
 
-  gsap.ticker.lagSmoothing(0);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+  }
 }
 
 gsap.utils.toArray(".stair-item").forEach((item) => {
@@ -131,3 +120,7 @@ gsap.utils.toArray(".stair-item").forEach((item) => {
     },
   });
 });
+
+window.onload = () => {
+  init();
+};
