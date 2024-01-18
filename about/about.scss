@@ -16,8 +16,8 @@
       .stair-item {
         position: absolute;
         top: 5%;
-        left: 50%;
-        width: 36vw;
+        left: 49%;
+        width: 36.14vw;
         height: auto;
       }
 
@@ -56,21 +56,28 @@
         width: 100%;
         display: flex;
         gap: 60px;
-        padding-bottom: 200px;
         align-items: flex-end;
-        padding-right: 40px;
+        padding: 0 40px 200px;
         box-sizing: border-box;
 
         .img1 {
-          width: 62.96%;
+          width: 63.4%;
           float: right;
+        }
+
+        @media screen and (max-width: 1400px) {
+          padding-bottom: 100px;
+
+          .img1 {
+            width: 100%;
+          }
         }
 
         .stair-item {
           position: absolute;
           top: 40%;
           left: -10%;
-          width: 36vw;
+          width: 36.14vw;
           height: auto;
           transform: rotate(90deg);
         }
@@ -90,7 +97,7 @@
         position: absolute;
         top: 20%;
         right: 10%;
-        width: 36vw;
+        width: 36.14vw;
         height: auto;
         // transform: rotate(90deg);
       }
@@ -204,8 +211,25 @@
   }
 
   @media screen and (max-width: 767px) {
+    // &::before {
+    //   display: block;
+    //   content: " ";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 300000px;
+    //   background: url(/img/sample/m_about.png) center top no-repeat;
+    //   background-size: contain;
+    //   opacity: 0.8;
+    //   z-index: 100;
+    //   display: none;
+    // }
+
     .stair-item {
-      display: none;
+      position: absolute;
+      width: 36.11vw;
+      left: 0;
     }
 
     .container {
@@ -223,6 +247,11 @@
       background-size: contain;
       padding-bottom: 130rem;
 
+      .stair-item {
+        top: 12%;
+        left: 50%;
+      }
+
       h1 {
         color: #000;
         font-family: Pretendard;
@@ -236,6 +265,9 @@
         bottom: 0;
         // transform: translateY(70%);
       }
+
+      .stair-item {
+      }
     }
 
     .sec2 {
@@ -243,7 +275,6 @@
       overflow: hidden;
       color: #000;
       font-style: normal;
-
       color: #000;
       font-family: Pretendard;
       font-size: 32rem;
@@ -256,7 +287,8 @@
       }
 
       .obj-wrap {
-        margin-top: 180rem;
+        position: relative;
+        margin-top: 175rem;
         width: 100%;
         display: flex;
         gap: 80rem;
@@ -264,8 +296,16 @@
         align-items: flex-start;
         box-sizing: border-box;
 
+        .stair-item {
+          transform: rotate(90deg);
+          top: 14%;
+          left: -13%;
+          width: 50vw;
+        }
+
         .img1 {
-          width: 80.55%;
+          margin-left: 30%;
+          width: 50.83%;
         }
 
         .txt2 {
@@ -275,11 +315,18 @@
     }
 
     .sec3 {
+      position: relative;
       padding: 180rem 0;
+
+      .stair-item {
+        top: 13.5%;
+        left: 49%;
+      }
 
       .txt1 {
         margin: 0 auto;
         margin-top: 80rem;
+        padding: 0 40rem;
         color: #000;
         text-align: center;
         font-family: Pretendard;
@@ -326,7 +373,7 @@
         color: #fff;
         text-align: center;
         font-family: Pretendard;
-        font-size: 16px;
+        font-size: 20rem;
         font-style: normal;
         font-weight: 500;
         line-height: 1.25;
@@ -341,8 +388,8 @@
         gap: 80rem;
 
         li {
-          width: 50vw;
-          height: 50vw;
+          width: 52vw;
+          height: 52vw;
           border-radius: 25vw;
           border: 1px solid white;
           color: white;
@@ -370,6 +417,10 @@
         line-height: 1.375;
         padding: 0 40rem;
         box-sizing: border-box;
+
+        br {
+          display: none;
+        }
       }
     }
   }

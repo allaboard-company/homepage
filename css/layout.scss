@@ -76,13 +76,14 @@ html {
       }
 
       @media screen and (min-width: 768px) {
-        &:hover {
+        &:hover,
+        &.active {
           transform: translateY(-10px);
           padding-bottom: 10px;
+        }
 
-          &::before {
-            opacity: 1;
-          }
+        &.active::before {
+          opacity: 1;
         }
       }
     }
@@ -219,7 +220,7 @@ html {
         font-weight: 700;
         display: inline-block;
         line-height: 1;
-        font-family: Noto Sans;
+        font-family: "Noto Sans";
       }
 
       &:hover {
@@ -242,8 +243,19 @@ html {
     margin: 0 !important;
     padding: 40rem !important;
 
-    .menu-area > nav {
-      display: none;
+    .logo {
+      font-size: 28rem;
+    }
+
+    .menu-area {
+      > nav {
+        display: none;
+      }
+
+      .toggle-menu-btn {
+        width: 32rem;
+        height: 32rem;
+      }
     }
 
     .fullpage-menu {
