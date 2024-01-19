@@ -222,6 +222,7 @@
   bottom: 0;
   background-color: white;
   z-index: 99;
+  overflow-y: auto;
 
   .btn-close {
     position: fixed;
@@ -229,10 +230,171 @@
     right: 53px;
     width: 60px;
     height: 60px;
-    background: url(/img/btn_close.svg) center no-repeat;
+    background: url(/img/btn_x.svg) center no-repeat;
+    background-color: black;
     outline: none;
     border: none;
     z-index: 9;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  .container {
+    padding: 160px 0;
+
+    h2 {
+      padding: 0 70px;
+      color: #000;
+      font-family: "Noto Sans";
+      font-size: 72px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 74px; /* 102.778% */
+    }
+
+    p,
+    .text {
+      margin: 0;
+      padding: 0 70px;
+      color: #000;
+      font-family: "Noto Sans";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 44px;
+    }
+
+    .hashtags {
+      margin-bottom: 18px;
+    }
+
+    .desc {
+      margin-top: 120px;
+      max-width: 960px;
+    }
+
+    .main-img {
+      margin: 40px 0 140px;
+      width: 100%;
+    }
+
+    .inner-container {
+      margin: 0 auto;
+      padding: 0 70px;
+      color: #000;
+      font-family: "Noto Sans";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 44px;
+      display: flex;
+      flex-flow: column;
+      gap: 40px;
+      max-width: 1066px;
+
+      h3 {
+        position: relative;
+        margin-top: 180px;
+        margin-bottom: 60px;
+        color: #000;
+        text-align: center;
+        font-family: "Noto Sans";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 54px; /* 112.5% */
+        padding-bottom: 156px;
+
+        &::before {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 2px;
+          height: 96px;
+          background-color: black;
+        }
+      }
+
+      img {
+        display: block;
+      }
+
+      .video-wrap {
+        position: relative;
+        padding-top: 28%;
+        width: 100%;
+        background: black;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .notes {
+      display: block;
+      margin-top: 60px;
+      position: relative;
+      padding: 156px 0 40px;
+
+      &::before {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 70px;
+        width: 2px;
+        height: 96px;
+        background-color: black;
+      }
+
+      li {
+        display: flex;
+
+        span {
+          margin-right: 122px;
+          width: 117px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .bot-float {
+    margin-bottom: 50px;
+    padding: 0 50px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    button {
+      width: 60px;
+      height: 60px;
+      outline: none;
+      border: none;
+      background: url(/img/arrow_left.svg) center no-repeat;
+      background-color: black;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #333;
+      }
+
+      &:last-of-type {
+        transform: rotate(180deg);
+      }
+    }
   }
 }

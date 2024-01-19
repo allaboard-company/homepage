@@ -1,12 +1,13 @@
-[
+const DUMMY_DATA = [
   {
-    "title": "LOTTE EBC #1",
-    "subtitle": "Lotte Executive Briefing Center : WELCOME",
-    "thumb_img": "/img/works/01.jpg",
-    "main_img": "/img/works/01/main_img.webp",
-    "hashtags": ["New_Media", "Contents_Design", "Branding"],
-    "head_desc": "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
-    "content": [
+    title: "LOTTE EBC #1",
+    subtitle: "Lotte Executive Briefing Center : WELCOME",
+    thumb_img: "/img/works/01.jpg",
+    main_img: "/img/works/01/main_img.png",
+    hashtags: ["New_Media", "Contents_Design", "Branding"],
+    head_desc:
+      "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
+    content: [
       "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
       "<h2>Welcome Zone: Stained Glass</h2>",
       "In the Welcome Zone, the iconic LOTTE World Tower in Seoul is transformed into a captivating and beautiful panorama through transparent displays, showcasing a vibrant array of patterns.",
@@ -35,67 +36,68 @@
       "<img src='/img/works/01/sub15.webp'/>",
       "<img src='/img/works/01/sub16.webp'/>",
       "<img src='/img/works/01/sub17.webp'/>",
-      "<img src='/img/works/01/sub18.webp'/>"
+      "<img src='/img/works/01/sub18.webp'/>",
     ],
-    "foot_desc": "We are a digital-oriented communication media group. Explore new trends in communications and develop evolving media platforms. Leveraging technology to connect brands and consumers Present solutions from a new perspective.",
-    "notes": [
+    foot_desc:
+      "We are a digital-oriented communication media group. Explore new trends in communications and develop evolving media platforms. Leveraging technology to connect brands and consumers Present solutions from a new perspective.",
+    notes: [
       {
-        "name": "Client",
-        "value": "LOTTE"
+        name: "Client",
+        value: "LOTTE",
       },
       {
-        "name": "Period",
-        "value": "2022. 8 ~ 2023. 01"
+        name: "Period",
+        value: "2022. 8 ~ 2023. 01",
       },
       {
-        "name": "Project Note.",
-        "value": "LED Display Contents"
-      }
-    ]
+        name: "Project Note.",
+        value: "LED Display Contents",
+      },
+    ],
   },
   {
-    "thumb_src": "/img/works/02.jpg",
-    "title": "LOTTE EBC #2",
-    "subtitle": "Lotte Executive Briefing Center : WELCOME"
+    thumb_src: "/img/works/02.jpg",
+    title: "LOTTE EBC #2",
+    subtitle: "Lotte Executive Briefing Center : WELCOME",
   },
   {
-    "thumb_src": "/img/works/03.jpg",
-    "title": "MOBIS CES",
-    "subtitle": "Hyundai Mobis CES Show 2023"
+    thumb_src: "/img/works/03.jpg",
+    title: "MOBIS CES",
+    subtitle: "Hyundai Mobis CES Show 2023",
   },
   {
-    "thumb_src": "/img/works/04.jpg",
-    "title": "STANDARD ENERGY",
-    "subtitle": "Lighting Control System"
+    thumb_src: "/img/works/04.jpg",
+    title: "STANDARD ENERGY",
+    subtitle: "Lighting Control System",
   },
   {
-    "thumb_src": "/img/works/05.jpg",
-    "title": "CLEANTOPIA",
-    "subtitle": "Service App GUI Design"
+    thumb_src: "/img/works/05.jpg",
+    title: "CLEANTOPIA",
+    subtitle: "Service App GUI Design",
   },
   {
-    "thumb_src": "/img/works/06.jpg",
-    "title": "AMWAY",
-    "subtitle": "Amway Kiosk GUI Design"
+    thumb_src: "/img/works/06.jpg",
+    title: "AMWAY",
+    subtitle: "Amway Kiosk GUI Design",
   },
   {
-    "thumb_src": "/img/works/07.jpg",
-    "title": "MOBIS PLATFORM",
-    "subtitle": "Hyundai Mobis B to B Service Platform"
+    thumb_src: "/img/works/07.jpg",
+    title: "MOBIS PLATFORM",
+    subtitle: "Hyundai Mobis B to B Service Platform",
   },
   {
-    "thumb_src": "/img/works/08.jpg",
-    "title": "MOBIS SHOWROOM",
-    "subtitle": "Hyundai Mobis Virtual Showroom"
+    thumb_src: "/img/works/08.jpg",
+    title: "MOBIS SHOWROOM",
+    subtitle: "Hyundai Mobis Virtual Showroom",
   },
   {
-    "thumb_src": "/img/works/09.jpg",
-    "title": "SEOSA",
-    "subtitle": "Seosa App Film Contents"
+    thumb_src: "/img/works/09.jpg",
+    title: "SEOSA",
+    subtitle: "Seosa App Film Contents",
   },
   {
-    "thumb_src": "/img/works/10.jpg",
-    "title": "LG DISPLAY",
-    "subtitle": "LG Display Virtual Exhibition"
-  }
-]
+    thumb_src: "/img/works/10.jpg",
+    title: "LG DISPLAY",
+    subtitle: "LG Display Virtual Exhibition",
+  },
+];
