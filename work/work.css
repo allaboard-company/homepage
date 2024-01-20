@@ -97,7 +97,6 @@
   .work-page ul li .subtitle {
     padding-left: 40px;
     color: #000;
-    font-family: Pretendard;
     font-size: 32px;
     font-style: normal;
     font-weight: 300;
@@ -122,7 +121,7 @@
     font-size: 18px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
   .work-page ul li .subtitle {
     padding-left: 23px;
     font-size: 16px;
@@ -134,11 +133,20 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .work-page .work-bg {
+    height: 126rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .work-page .stair-item {
-    display: none;
+    position: absolute;
+    top: -1vw;
+    left: 30%;
+    width: 36.14vw;
+    height: auto;
   }
   .work-page ul {
-    margin-top: 57rem;
+    margin-top: 80rem;
     padding: 0 40rem;
     width: 100%;
     box-sizing: border-box;
@@ -168,11 +176,10 @@
   }
   .work-page ul li .thumb-wrap img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 110%;
-    height: 110%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
   }
   .work-page ul li .thumb-wrap:hover img {
@@ -187,7 +194,7 @@
     margin-top: -29rem;
     white-space: nowrap;
   }
-  .work-page ul li .txt {
+  .work-page ul li .subtitle {
     color: #000;
     font-family: Pretendard;
     font-size: 32rem;
@@ -227,10 +234,16 @@
   background-color: #333;
 }
 .work-detail-page .container {
-  padding: 160px 0;
+  padding: 160px 70px;
+  overflow: hidden;
+  color: #000;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 44px;
 }
 .work-detail-page .container h2 {
-  padding: 0 70px;
   color: #000;
   font-family: "Noto Sans";
   font-size: 72px;
@@ -238,37 +251,19 @@
   font-weight: 700;
   line-height: 74px; /* 102.778% */
 }
-.work-detail-page .container p,
-.work-detail-page .container .text {
-  margin: 0;
-  padding: 0 70px;
-  color: #000;
-  font-family: "Noto Sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 44px;
-}
-.work-detail-page .container .hashtags {
-  margin-bottom: 18px;
-}
 .work-detail-page .container .desc {
   margin-top: 120px;
   max-width: 960px;
 }
 .work-detail-page .container .main-img {
-  margin: 40px 0 140px;
-  width: 100%;
+  margin: 40px auto 140px;
+  margin-left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
 }
 .work-detail-page .container .inner-container {
   margin: 0 auto;
-  padding: 0 70px;
-  color: #000;
-  font-family: "Noto Sans";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 44px;
+  padding: 0;
   display: flex;
   flex-flow: column;
   gap: 40px;
@@ -324,7 +319,7 @@
   content: " ";
   position: absolute;
   top: 0;
-  left: 70px;
+  left: 0;
   width: 2px;
   height: 96px;
   background-color: black;
@@ -360,4 +355,75 @@
 }
 .work-detail-page .bot-float button:last-of-type {
   transform: rotate(180deg);
+}
+@media screen and (max-width: 767px) {
+  .work-detail-page .btn-close {
+    top: 0;
+    right: 0;
+    width: 116rem;
+    height: 116rem;
+    background-size: 36rem;
+  }
+  .work-detail-page .container {
+    padding: 240rem 40rem;
+    font-size: 32rem;
+    line-height: 44rem;
+  }
+  .work-detail-page .container h2 {
+    font-size: 58rem;
+    line-height: 1.17;
+  }
+  .work-detail-page .container .desc {
+    margin-top: 120rem;
+  }
+  .work-detail-page .container .main-img {
+    margin: 80rem 0;
+    margin-left: 50%;
+    width: 100vw;
+  }
+  .work-detail-page .container .inner-container {
+    gap: 40rem;
+  }
+  .work-detail-page .container .inner-container h3 {
+    margin-top: 180rem;
+    margin-bottom: 60rem;
+    padding-bottom: 156rem;
+  }
+  .work-detail-page .container .inner-container h3::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 2rem;
+    height: 96rem;
+    background-color: black;
+  }
+  .work-detail-page .container .notes {
+    margin-top: 60rem;
+    padding: 156rem 0 40rem;
+  }
+  .work-detail-page .container .notes::before {
+    width: 2rem;
+    height: 96rem;
+  }
+  .work-detail-page .container .notes li {
+    display: flex;
+  }
+  .work-detail-page .container .notes li span {
+    margin-right: 122rem;
+    width: 117rem;
+    white-space: nowrap;
+  }
+  .work-detail-page .bot-float {
+    margin-bottom: 40rem;
+    padding: 0 40rem;
+  }
+  .work-detail-page .bot-float button {
+    width: 116rem;
+    height: 116rem;
+    background: url(/img/arrow_left.svg) center no-repeat;
+    background-color: black;
+    background-size: 24px 36px;
+  }
 }/*# sourceMappingURL=work.css.map */
