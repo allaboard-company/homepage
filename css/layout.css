@@ -15,6 +15,9 @@ a {
     transition-delay: 0 !important;
   }
 }
+html {
+  overscroll-behavior: none;
+}
 html ::-webkit-scrollbar {
   display: none;
 }

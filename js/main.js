@@ -82,7 +82,11 @@ function init() {
   document.body.classList.remove("loading");
 
   if (window.AOS) {
-    AOS.init();
+    AOS.init({
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 600, // values from 0 to 3000, with step 50ms
+      easing: "ease-in-out",
+    });
   }
 
   if (window.ScrollTrigger) {
