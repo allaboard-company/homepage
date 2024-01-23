@@ -1,12 +1,5 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
+import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(
@@ -24,11 +17,12 @@ function Seo({ description, title, children }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>{title ? `${title} | Aboard` : "Aboard"}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -37,6 +31,16 @@ function Seo({ description, title, children }) {
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+
+      <link
+        rel="stylesheet"
+        as="style"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+      <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
       {children}
     </>
   )
