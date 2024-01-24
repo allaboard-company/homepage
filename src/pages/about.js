@@ -38,7 +38,7 @@ const AboutPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout pageName="about">
       <div className="about-page">
         <section className="sec1">
           <h1>

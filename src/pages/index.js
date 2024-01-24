@@ -35,7 +35,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout pageName="index">
       <div className="main-page">
         <div className="bg-wrap"></div>
         <div className="scroll-space">

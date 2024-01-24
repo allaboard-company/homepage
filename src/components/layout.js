@@ -1,21 +1,26 @@
+import AOS from "aos"
+import "aos/dist/aos.css"
 import { gsap } from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import * as React from "react"
-import "../assets/css/reset.css"
 import "../assets/css/layout.scss"
+import "../assets/css/reset.css"
+import Footer from "./footer"
 import Header from "./header"
-import AOS from "aos"
-import "aos/dist/aos.css"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Layout = ({ children }) => {
+const Layout = ({ pageName, children }) => {
   React.useEffect(() => {
-    console.log("layout init")
     init()
   }, [])
 
   async function init() {
+    console.log("hi")
+    window.scrollTo({
+      top: 0,
+    })
+
     if (document.querySelector(".btn-top")) {
       document.querySelector(".btn-top").addEventListener("click", function () {
         window.scrollTo({
@@ -56,27 +61,11 @@ const Layout = ({ children }) => {
     AOS.init()
   }
 
-  function renderFooter() {
-    if (
-      !window.location.pathname.startsWith("/about") &&
-      !window.location.pathname.startsWith("/work")
-    ) {
-      return <></>
-    }
-
-    return (
-      <footer>
-        <span className="copyright">©2023 ABOARD.</span>
-        <button className="btn-top">TOP</button>
-      </footer>
-    )
-  }
-
   return (
     <>
-      <Header />
+      <Header pageName={pageName} />
       <main>{children}</main>
-      {renderFooter()}
+      <Footer pageName={pageName} />
     </>
   )
 }

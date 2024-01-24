@@ -215,7 +215,7 @@ const WorkPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout pageName="work">
       <div className="work-page">
         <img src="/img/work_bg.webp" className="w100" />
         <ul className="work-list">

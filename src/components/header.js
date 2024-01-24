@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import gsap, { Power2 } from "gsap"
 import * as React from "react"
 
-const Header = () => {
+const Header = ({ pageName }) => {
   React.useEffect(() => {
     init()
   }, [])
@@ -84,27 +84,15 @@ const Header = () => {
       </a>
       <div className="menu-area">
         <nav>
-          <Link
-            to="/about"
-            className={
-              window.location.pathname.startsWith("/about") ? "active" : ""
-            }
-          >
+          <Link to="/about" className={pageName === "about" ? "active" : ""}>
             ABOUT
           </Link>
-          <Link
-            to="/work"
-            className={
-              window.location.pathname.startsWith("/work") ? "active" : ""
-            }
-          >
+          <Link to="/work" className={pageName === "work" ? "active" : ""}>
             WORK
           </Link>
           <Link
             to="/contact"
-            className={
-              window.location.pathname.startsWith("/contact") ? "active" : ""
-            }
+            className={pageName === "contact" ? "active" : ""}
           >
             CONTACT
           </Link>

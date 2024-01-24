@@ -12,7 +12,7 @@ const ContactPage = () => {
   async function init() {}
 
   return (
-    <Layout>
+    <Layout pageName="contact">
       <div className="contact-page">
         <div></div>
         <div>
