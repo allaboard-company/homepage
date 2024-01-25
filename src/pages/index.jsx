@@ -1,4 +1,4 @@
-import gsap from "gsap"
+import gsap, { Power2 } from "gsap"
 import * as React from "react"
 import "../assets/css/page.main.scss"
 import Layout from "../components/layout"
@@ -36,22 +36,14 @@ const IndexPage = () => {
       duration: 1,
       // x: 180,
       width: "50%",
-      ease: "Expo.easeInOut",
+      ease: Power2.easeOut,
     })
-
-    setTimeout(() => {
-      document.querySelector(".menu-area").classList.add("white")
-      gsap.to(".toggle-menu-btn .bar", {
-        stroke: "white",
-        // ease: Power2.easeOut,
-      })
-    }, 500)
 
     gsap.to(".white-bars > li:nth-of-type(2)", {
       duration: 0.9,
       x: -itemSize,
       width: "50%",
-      ease: "Expo.easeInOut",
+      ease: Power2.easeOut,
       delay: 0.1,
     })
 
@@ -59,21 +51,33 @@ const IndexPage = () => {
       duration: 0.8,
       x: -itemSize * 2,
       width: "50%",
-      ease: "Expo.easeInOut",
+      ease: Power2.easeOut,
       delay: 0.2,
     })
 
-    gsap.to(".bg-overlay", {
-      backgroundColor: "transparent",
+    gsap.to(".bg-overlay > .black-bg", {
+      alpha: 0,
       duration: 0.8,
-      ease: "Expo.easeInOut",
-      delay: 1,
-      onComplete: () => {
-        document
-          .querySelector(".txt-list > li:first-of-type")
-          .classList.add("active")
-      },
+      ease: Power2.easeInOut,
+      delay: 0.6,
     })
+
+    setTimeout(() => {
+      gsap.to(".toggle-menu-btn .bar", {
+        stroke: "white",
+        // ease: Power2.easeOut,
+      })
+    }, 50)
+
+    setTimeout(() => {
+      document.querySelector(".menu-area").classList.add("white")
+    }, 100)
+
+    setTimeout(() => {
+      document
+        .querySelector(".txt-list > li:first-of-type")
+        .classList.add("active")
+    }, 800)
 
     let targets = gsap.utils.toArray(".scroll-container > div")
     targets.forEach((item, index) => {
@@ -159,6 +163,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="bg-overlay">
+          <div className="black-bg"></div>
           <ul className="white-bars">
             <li></li>
             <li></li>
