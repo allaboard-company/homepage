@@ -16,11 +16,6 @@ const Layout = ({ pageName, children }) => {
   }, [])
 
   async function init() {
-    console.log("hi")
-    window.scrollTo({
-      top: 0,
-    })
-
     if (document.querySelector(".btn-top")) {
       document.querySelector(".btn-top").addEventListener("click", function () {
         window.scrollTo({
@@ -58,7 +53,11 @@ const Layout = ({ pageName, children }) => {
     }
 
     document.body.classList.remove("loading")
-    AOS.init()
+    AOS.init({
+      offset: 30,
+      duration: 600,
+      easing: "ease-in-out",
+    })
   }
 
   return (

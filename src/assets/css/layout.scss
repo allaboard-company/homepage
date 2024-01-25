@@ -22,6 +22,7 @@ a {
 
 html {
   overscroll-behavior: none;
+  overflow: hidden;
 
   ::-webkit-scrollbar {
     display: none;
@@ -92,6 +93,16 @@ html {
         &.active::before {
           opacity: 1;
         }
+      }
+    }
+
+    .menu-area.white {
+      > nav a {
+        color: white;
+      }
+
+      &::before {
+        background-color: white;
       }
     }
 
