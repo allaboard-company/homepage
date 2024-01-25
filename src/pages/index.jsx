@@ -55,12 +55,12 @@ const IndexPage = () => {
       delay: 0.2,
     })
 
-    gsap.to(".bg-overlay > .black-bg", {
-      alpha: 0,
-      duration: 0.8,
-      ease: Power2.easeInOut,
-      delay: 0.6,
-    })
+    // gsap.to(".bg-overlay > .black-bg", {
+    //   alpha: 0,
+    //   duration: 0.8,
+    //   ease: Power2.easeInOut,
+    //   delay: 0.6,
+    // })
 
     setTimeout(() => {
       gsap.to(".toggle-menu-btn .bar", {
@@ -70,13 +70,19 @@ const IndexPage = () => {
     }, 50)
 
     setTimeout(() => {
-      document.querySelector(".menu-area").classList.add("white")
+      const el = document.querySelector(".menu-area")
+      if (!el) {
+        return
+      }
+      el.classList.add("white")
     }, 100)
 
     setTimeout(() => {
-      document
-        .querySelector(".txt-list > li:first-of-type")
-        .classList.add("active")
+      const el = document.querySelector(".txt-list > li:first-of-type")
+      if (!el) {
+        return
+      }
+      el.classList.add("active")
     }, 800)
 
     let targets = gsap.utils.toArray(".scroll-container > div")
@@ -206,13 +212,13 @@ const IndexPage = () => {
         </div>
         <div className="scroll-container">
           <div></div>
+          {/* <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
-          <div></div>
-          <div></div>
+          <div></div> */}
         </div>
         <p className="copyright">©2023 ABOARD.</p>
       </div>

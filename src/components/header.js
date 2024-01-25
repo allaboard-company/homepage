@@ -84,11 +84,11 @@ const Header = ({ pageName }) => {
       </a>
       <div className="menu-area">
         <nav>
+          <Link to="/" className={pageName === "work" ? "active" : ""}>
+            WORK
+          </Link>
           <Link to="/about" className={pageName === "about" ? "active" : ""}>
             ABOUT
-          </Link>
-          <Link to="/work" className={pageName === "work" ? "active" : ""}>
-            WORK
           </Link>
           <Link
             to="/contact"
