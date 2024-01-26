@@ -297,66 +297,6 @@ const IndexPage = () => {
       }
       el.classList.add("white")
     }, 100)
-
-    setTimeout(() => {
-      const el = document.querySelector(".txt-list > li:first-of-type")
-      if (!el) {
-        return
-      }
-      el.classList.add("active")
-    }, 800)
-
-    let targets = gsap.utils.toArray(".scroll-container > div")
-    targets.forEach((item, index) => {
-      gsap.to(item, {
-        scrollTrigger: {
-          scroller: ".scroll-container",
-          trigger: item,
-          start: "top",
-          onEnter: () => {
-            const target = index
-            // document
-            //   .querySelectorAll(".bg-container > div")
-            //   .forEach((el, index) => {
-            //     if (index == target) {
-            //       el.classList.add("active")
-            //     } else {
-            //       el.classList.remove("active")
-            //     }
-            //   })
-
-            // document.querySelectorAll(".txt-list > li").forEach((el, index) => {
-            //   if (index == target) {
-            //     el.classList.add("active")
-            //   } else {
-            //     el.classList.remove("active")
-            //   }
-            // })
-          },
-          onLeaveBack: () => {
-            const target = index
-            console.log("leave:" + target)
-            // document
-            //   .querySelectorAll(".bg-container > div")
-            //   .forEach((el, index) => {
-            //     if (index == target) {
-            //       el.classList.add("active")
-            //     } else {
-            //       el.classList.remove("active")
-            //     }
-            //   })
-
-            // document.querySelectorAll(".txt-list > li").forEach((el, index) => {
-            //   if (index == target) {
-            //     el.classList.add("active")
-            //   } else {
-            //     el.classList.remove("active")
-            //   }
-            // })
-          },
-        },
-      })
-    })
   }
 
   function extractAttributeValue(str, attributeName) {
@@ -491,9 +431,9 @@ const IndexPage = () => {
 
   return (
     <Layout pageName="index">
-      <div className="main-page" data-lenis-prevent>
+      <div className="main-page">
         <Swiper
-          loop={true}
+          // loop={true}
           modules={[Pagination]}
           className="bg-swiper"
           spaceBetween={0}
@@ -503,7 +443,7 @@ const IndexPage = () => {
           loopAdditionalSlides={10}
           speed={500}
           watchSlidesProgress={true}
-          grabCursor={true}
+          // grabCursor={true}
           pagination={{
             type: "bullets",
             clickable: true,
