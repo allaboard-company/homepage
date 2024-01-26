@@ -50,9 +50,11 @@ const DUMMY_DATA = [
       "<img src='/img/works/01/sub18.webp'/>",
       "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
-    client: "LOTTE",
-    period: "2022. 8 ~ 2023. 01",
-    proejct_note: "LED Display Contents",
+    notes: [
+      { name: "Client", value: "LOTTE" },
+      { name: "Period", value: "2022. 8 ~ 2023. 01" },
+      { name: "Project Note.", value: "LED Display Contents" },
+    ],
   },
   {
     thumb_src: "/img/works/02.jpg",
@@ -85,9 +87,11 @@ const DUMMY_DATA = [
       "<img src='/img/works/02/sub10.webp'/>",
       "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
-    client: "LOTTE",
-    period: "2022. 8 ~ 2023. 01",
-    proejct_note: "LED Display Contents",
+    notes: [
+      { name: "Client", value: "LOTTE" },
+      { name: "Period", value: "2022. 8 ~ 2023. 01" },
+      { name: "Project Note.", value: "LED Display Contents" },
+    ],
   },
   {
     thumb_src: "/img/works/03.jpg",
@@ -118,44 +122,11 @@ const DUMMY_DATA = [
       "<img src='/img/works/03/sub11.webp'/>",
       "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
-    client: "HYUNDAI MOBIS",
-    period: "2022. 8 ~ 2023. 01",
-    proejct_note: "LED Display, AR",
-  },
-  {
-    thumb_src: "/img/works/04.jpg",
-    title: "STANDARD ENERGY",
-    subtitle: "Lighting Control System",
-  },
-  {
-    thumb_src: "/img/works/05.jpg",
-    title: "CLEANTOPIA",
-    subtitle: "Service App GUI Design",
-  },
-  {
-    thumb_src: "/img/works/06.jpg",
-    title: "AMWAY",
-    subtitle: "Amway Kiosk GUI Design",
-  },
-  {
-    thumb_src: "/img/works/07.jpg",
-    title: "MOBIS PLATFORM",
-    subtitle: "Hyundai Mobis B to B Service Platform",
-  },
-  {
-    thumb_src: "/img/works/08.jpg",
-    title: "MOBIS SHOWROOM",
-    subtitle: "Hyundai Mobis Virtual Showroom",
-  },
-  {
-    thumb_src: "/img/works/09.jpg",
-    title: "SEOSA",
-    subtitle: "Seosa App Film Contents",
-  },
-  {
-    thumb_src: "/img/works/10.jpg",
-    title: "LG DISPLAY",
-    subtitle: "LG Display Virtual Exhibition",
+    notes: [
+      { name: "Client", value: "HYUNDAI MOBIS" },
+      { name: "Period", value: "2022. 8 ~ 2023. 01" },
+      { name: "Project Note.", value: "LED Display, AR" },
+    ],
   },
 ]
 const IndexPage = () => {
@@ -176,7 +147,9 @@ const IndexPage = () => {
   async function handleResize() {
     const isMobile = window.innerWidth < 768
     if (!isMobile) {
-      const itemSize = window.innerHeight / 3
+      let itemSize = window.innerHeight / 3
+      itemSize =
+        window.innerWidth < itemSize * 4 ? window.innerWidth / 4 : itemSize
       gsap.to(".white-bars > li:first-of-type", {
         duration: 1,
         width: "50%",
@@ -280,13 +253,11 @@ const IndexPage = () => {
       if (!isMobile) {
         gsap.to(".toggle-menu-btn .bar", {
           stroke: "white",
-          // ease: Power2.easeOut,
         })
       }
 
       gsap.to(".copyright", {
         color: "white",
-        // ease: Power2.easeOut,
       })
     }, 50)
 
@@ -435,8 +406,6 @@ const IndexPage = () => {
     })
   }
 
-  const interleaveOffset = 0.9
-
   return (
     <Layout pageName="index">
       <div className="main-page">
@@ -450,6 +419,7 @@ const IndexPage = () => {
           mousewheel={true}
           loopAdditionalSlides={10}
           speed={500}
+          grabCursor={true}
           watchSlidesProgress={true}
           // grabCursor={true}
           pagination={{
@@ -466,61 +436,61 @@ const IndexPage = () => {
           onSlideChange={swiper => {
             const index = swiper.activeIndex
             if (index === 0) {
-              setTitle1("WELCOME")
-              setTitle2("ABOARD")
+              gsap.to(".project-title-wrap", { alpha: 0 })
+              gsap.to(".txt-list", { alpha: 1 })
             } else {
-              setTitle1(index)
-              setTitle2(DUMMY_DATA[index].title)
+              gsap.to(".project-title-wrap", { alpha: 1 })
+              gsap.to(".txt-list", { alpha: 0 })
+              setTitle1(DUMMY_DATA[index - 1].title)
+              setTitle2(DUMMY_DATA[index - 1].subtitle)
             }
           }}
           onProgress={swiper => {
             console.log("onProgress..", innerTranslate)
-            for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress
-
+            const interleaveOffset = 0.9
+            for (const slide of swiper.slides) {
+              var slideProgress = slide.progress
               var innerOffset = swiper.height * interleaveOffset
               var innerTranslate = slideProgress * innerOffset
               console.log(
                 slideProgress + ", " + innerOffset + "," + innerTranslate
               )
-              swiper.slides[i].querySelector(".bg-img").style.transform =
+              slide.querySelector(".bg-img").style.transform =
                 "translate3d(0, " + innerTranslate + "px, 0)"
             }
           }}
           onTouchStart={swiper => {
             console.log("onTouchStart")
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = ""
+            for (const slide of swiper.slides) {
+              slide.style.transition = ""
             }
           }}
           onSetTransition={(swiper, transition) => {
             console.log("onSetTransition")
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = transition + "ms"
+            for (const slide of swiper.slides) {
+              slide.style.transition = transition + "ms"
+              slide.querySelector(".bg-img").style.transition =
+                transition + "ms"
             }
           }}
         >
           <SwiperSlide>
             <div className="bg-img" style={{ backgroundColor: "black" }}></div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="bg-img"
-              style={{ background: "url(/img/works/01.jpg" }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="bg-img"
-              style={{ background: "url(/img/works/02.jpg" }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              className="bg-img"
-              style={{ background: "url(/img/works/03.jpg" }}
-            ></div>{" "}
-          </SwiperSlide>
+          {DUMMY_DATA.map(item => {
+            return (
+              <SwiperSlide>
+                <div
+                  className="bg-img"
+                  style={{
+                    background: `url("${item["main_img"]}")`,
+                  }}
+                ></div>
+                <p className="title">${item["title"]}</p>
+                <p className="subtitle">${item["subtitle"]}</p>
+              </SwiperSlide>
+            )
+          })}
           <div className="swiper-pagination"></div>
           <div className="gradient-bg"></div>
           <div className="black-bg"></div>
@@ -531,11 +501,15 @@ const IndexPage = () => {
           </ul>
           <ul className="txt-list">
             <li>
-              <span>{title1}</span>
-              <span>{title2}</span>
+              <span>WELCOME</span>
+              <span>ABOARD</span>
             </li>
           </ul>
         </Swiper>
+        <div className="project-title-wrap">
+          <p className="title">{title1}</p>
+          <p className="subtitle">{title2}</p>
+        </div>
         <p className="copyright">©2023 ABOARD.</p>
       </div>
       <div className="work-detail-page" data-lenis-prevent>
