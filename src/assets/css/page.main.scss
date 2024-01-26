@@ -73,6 +73,7 @@
       margin-top: 10px;
       font-size: 32px;
       line-height: 1.06;
+      white-space: pre;
     }
 
     @media screen and (max-width: 767px) {
@@ -145,7 +146,7 @@
     height: 33.3vh;
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 100vw;
     margin-left: -66.6vh;
     display: flex;
     align-items: center;

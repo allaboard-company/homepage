@@ -106,11 +106,13 @@ const Header = ({ pageName }) => {
             </div>
             <nav>
               <ul className="main-menu">
-                <li className="active">
-                  <Link to="/about">About</Link>
+                <li>
+                  <Link to="/" className="active">
+                    Work
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/work">Work</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>

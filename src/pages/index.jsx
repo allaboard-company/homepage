@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 const DUMMY_DATA = [
   {
     title: "LOTTE EBC #1",
-    subtitle: "Lotte Executive Briefing Center : WELCOME",
+    subtitle: "Lotte Executive Briefing Center\nWELCOME",
     thumb_img: "/img/works/01.jpg",
     main_img: "/img/works/01/main_img.webp",
     hashtags: ["New_Media", "Contents_Design", "Branding"],
@@ -59,7 +59,7 @@ const DUMMY_DATA = [
   {
     thumb_src: "/img/works/02.jpg",
     title: "LOTTE EBC #2",
-    subtitle: "Lotte Executive Briefing Center : WELCOME",
+    subtitle: "Lotte Executive Briefing Center\nWELCOME",
     thumb_img: "/img/works/02.jpg",
     main_img: "/img/works/02/main_img.webp",
     hashtags: ["New_Media", "Contents_Design", "Branding"],
@@ -187,7 +187,7 @@ const IndexPage = () => {
         {
           duration: 1,
           width: "100%",
-          height: "50%",
+          height: itemSize * 3,
           ease: Power2.easeOut,
         }
       )
@@ -202,10 +202,9 @@ const IndexPage = () => {
         },
         {
           duration: 0.9,
-          y: -itemSize,
           x: 0,
           width: "100%",
-          height: "50%",
+          height: itemSize * 2,
           ease: Power2.easeOut,
           delay: 0.1,
         }
@@ -222,9 +221,8 @@ const IndexPage = () => {
         {
           duration: 0.8,
           x: 0,
-          y: -itemSize * 2,
           width: "100%",
-          height: "50%",
+          height: itemSize * 1,
           ease: Power2.easeOut,
           delay: 0.2,
         }
