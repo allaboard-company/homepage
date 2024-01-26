@@ -20,14 +20,14 @@ const DUMMY_DATA = [
     desc: "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
     content: [
       "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
-      "<h2>Welcome Zone: Stained Glass</h2>",
+      "<h3>Welcome Zone: Stained Glass</h3>",
       "In the Welcome Zone, the iconic LOTTE World Tower in Seoul is transformed into a captivating and beautiful panorama through transparent displays, showcasing a vibrant array of patterns.",
       "<vimeo id='https://vimeo.com/875463114'/>",
       "<img src='/img/works/01/sub01.webp'/>",
       "<img src='/img/works/01/sub02.webp'/>",
       "<img src='/img/works/01/sub03.webp'/>",
       "<img src='/img/works/01/sub04.webp'/>",
-      "<h2>Welcome Zone: LOTTE Value Element</h2>",
+      "<h3>Welcome Zone: LOTTE Value Element</h3>",
       "LOTTE Group's businesses are visually represented through trendy objects and dynamic motions, creating a spectacular presentation of materials and properties.",
       "<vimeo id='https://vimeo.com/875463114'/>",
       "<img src='/img/works/01/sub05.webp'/>",
@@ -41,7 +41,7 @@ const DUMMY_DATA = [
       "<img src='/img/works/01/sub12.webp'/>",
       "<img src='/img/works/01/sub13.webp'/>",
       "<img src='/img/works/01/sub14.webp'/>",
-      "<h2>Welcome Zone: Space LOTTE</h2>",
+      "<h3>Welcome Zone: Space LOTTE</h3>",
       "Transparent displays recreate the awe-inspiring sky view from the 113th floor, symbolizing LOTTE's boundless potential and limitless opportunities.",
       "<vimeo id='https://vimeo.com/875516173'/>",
       "<img src='/img/works/01/sub15.webp'/>",
@@ -64,20 +64,20 @@ const DUMMY_DATA = [
     desc: "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
     content: [
       "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
-      "<h2>PR Zone: Art Forest</h2>",
+      "<h3>PR Zone: Art Forest</h3>",
       "The Art Forest in the PR Zone expands the perception of limited space, creating a sense of openness. As light filters through the forest, it transforms into a captivating and ever-changing fantasy.",
       "<vimeo id='https://vimeo.com/875532472'/>",
       "<img src='/img/works/02/sub01.webp'/>",
       "<img src='/img/works/02/sub02.webp'/>",
       "<img src='/img/works/02/sub03.webp'/>",
-      "<h2>PR Zone: SECRET GARDEN</h2>",
+      "<h3>PR Zone: SECRET GARDEN</h3>",
       "In the Secret Garden, the use of diverse window patterns creates an illusion of expanded space. It presents a fantasy representation of what unfolds within a hidden garden.",
       "<vimeo id='https://vimeo.com/875531297'/>",
       "<img src='/img/works/02/sub04.webp'/>",
       "<img src='/img/works/02/sub05.webp'/>",
       "<img src='/img/works/02/sub06.webp'/>",
       "<img src='/img/works/02/sub07.webp'/>",
-      "<h2>PR Zone: CLOUD</h2>",
+      "<h3>PR Zone: CLOUD</h3>",
       "The Clouds in this zone symbolize the altitude of the 113th floor, dynamically transforming through time to create a fantastical representation of various cloud formations.",
       "<vimeo id='https://vimeo.com/875531937'/>",
       "<img src='/img/works/02/sub08.webp'/>",
@@ -99,10 +99,10 @@ const DUMMY_DATA = [
     desc: "ABOARD utilized Hyundai Mobis' cutting-edge urban mobility platform, M.Vision TO, to create immersive media content at CES 2023. This content offers visitors the opportunity to directly and effectively experience a wide array of future city environments.",
     content: [
       "At CES 2023, New Gaze spearheaded a groundbreaking project in collaboration with Hyundai Mobis, centered around the use of their innovative urban mobility platform, M.Vision TO. Our mission was to craft immersive media content that allows visitors to experience an assortment of future city environments in a direct and highly effective manner.\n\nThrough M.Vision TO, we've harnessed the potential of cutting-edge technology to transport attendees into the heart of diverse urban landscapes. By leveraging our media content, we've made it possible for CES 2023 visitors to get up close and personal with the future of cities, showcasing how urban spaces can be efficiently and thoughtfully used. This project is a testament to our commitment to pushing the boundaries of what's possible in the realm of urban mobility and smart city development.",
-      "<h2>M VISION TO : Augmented Reality</h2>",
+      "<h3>M VISION TO : Augmented Reality</h3>",
       "Our project focuses on optimizing the passenger experience through the development of user-friendly interfaces. This includes the creation of Meta Contents UX.I and Proactive UX. Our goal is to provide passengers with immersive, seamless, and interactive experiences during their journeys, setting new standards in transportation industry interface development.",
       "<img src='/img/works/03/sub01.webp'/>",
-      "<h2>LED TRI - SCREEN : DRIVING FILM</h2>",
+      "<h3>LED TRI - SCREEN : DRIVING FILM</h3>",
       "We've created large LED tri-screen videos to provide an immersive experience of driving through a future city. These videos are seamlessly integrated with M.VISION TO vehicles to deliver a real-life, futuristic urban journey.",
       "<vimeo id='https://vimeo.com/875553839'/>",
       "<img src='/img/works/03/sub01.webp'/>",
@@ -335,7 +335,7 @@ const IndexPage = () => {
 
     let html = ""
     if (title) {
-      html += `<h2>${title}</h2>`
+      html += `<h3>${title}</h3>`
     }
 
     if (hashtags) {
