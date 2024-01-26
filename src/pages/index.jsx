@@ -434,10 +434,20 @@ const IndexPage = () => {
             const index = swiper.activeIndex
             if (index === 0) {
               gsap.to(".project-title-wrap", { alpha: 0 })
-              gsap.to(".txt-list", { alpha: 1 })
+              gsap.to(".txt-list", {
+                alpha: 1,
+                onComplete: () => {
+                  document.querySelector(".txt-list").style.display = "block"
+                },
+              })
             } else {
               gsap.to(".project-title-wrap", { alpha: 1 })
-              gsap.to(".txt-list", { alpha: 0 })
+              gsap.to(".txt-list", {
+                alpha: 0,
+                onComplete: () => {
+                  document.querySelector(".txt-list").style.display = "none"
+                },
+              })
               setTitle1(DUMMY_DATA[index - 1].title)
               setTitle2(DUMMY_DATA[index - 1].subtitle)
             }
