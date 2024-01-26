@@ -130,9 +130,8 @@ const DUMMY_DATA = [
   },
 ]
 const IndexPage = () => {
-  const [title1, setTitle1] = React.useState("WELCOME")
-  const [title2, setTitle2] = React.useState("ABOARD")
-  // const [title3, setTitle3] = React.useState("ABOARD")
+  const [title1, setTitle1] = React.useState("")
+  const [title2, setTitle2] = React.useState("")
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
