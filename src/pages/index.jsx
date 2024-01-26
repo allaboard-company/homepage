@@ -311,7 +311,7 @@ const IndexPage = () => {
 
     let html = ""
     if (title) {
-      html += `<h3>${title}</h3>`
+      html += `<h2>${title}</h2>`
     }
 
     if (hashtags) {
