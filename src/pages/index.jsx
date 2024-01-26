@@ -161,6 +161,7 @@ const DUMMY_DATA = [
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("WELCOME")
   const [title2, setTitle2] = React.useState("ABOARD")
+  // const [title3, setTitle3] = React.useState("ABOARD")
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -203,32 +204,59 @@ const IndexPage = () => {
       })
     } else {
       const itemSize = window.innerWidth / 3
-      gsap.to(".white-bars > li:first-of-type", {
-        duration: 1,
-        width: "100%",
-        height: "50%",
-        ease: Power2.easeOut,
-      })
+      gsap.fromTo(
+        ".white-bars > li:first-of-type",
+        {
+          x: 0,
+          y: 0,
+          width: "100%",
+          height: "100%",
+        },
+        {
+          duration: 1,
+          width: "100%",
+          height: "50%",
+          ease: Power2.easeOut,
+        }
+      )
 
-      gsap.to(".white-bars > li:nth-of-type(2)", {
-        duration: 0.9,
-        y: -itemSize,
-        x: 0,
-        width: "100%",
-        height: "50%",
-        ease: Power2.easeOut,
-        delay: 0.1,
-      })
+      gsap.fromTo(
+        ".white-bars > li:nth-of-type(2)",
+        {
+          x: 0,
+          y: 0,
+          width: "100%",
+          height: "100%",
+        },
+        {
+          duration: 0.9,
+          y: -itemSize,
+          x: 0,
+          width: "100%",
+          height: "50%",
+          ease: Power2.easeOut,
+          delay: 0.1,
+        }
+      )
 
-      gsap.to(".white-bars > li:nth-of-type(3)", {
-        duration: 0.8,
-        x: 0,
-        y: -itemSize * 2,
-        width: "100%",
-        height: "50%",
-        ease: Power2.easeOut,
-        delay: 0.2,
-      })
+      gsap.fromTo(
+        ".white-bars > li:nth-of-type(3)",
+        {
+          x: 0,
+          y: 0,
+          width: "100%",
+          height: "100%",
+        },
+        {
+          duration: 0.8,
+          x: 0,
+          y: -itemSize * 2,
+          width: "100%",
+          height: "50%",
+          ease: Power2.easeOut,
+          delay: 0.2,
+        }
+      )
     }
 
     gsap.to(".copyright", {
@@ -465,6 +493,7 @@ const IndexPage = () => {
     <Layout pageName="index">
       <div className="main-page" data-lenis-prevent>
         <Swiper
+          loop={true}
           modules={[Pagination]}
           className="bg-swiper"
           spaceBetween={0}
