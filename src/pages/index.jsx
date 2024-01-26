@@ -7,7 +7,7 @@ import Seo from "../components/seo"
 
 import "swiper/css"
 import "swiper/css/pagination"
-import { Pagination } from "swiper/modules"
+import { Pagination, Mousewheel } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 const DUMMY_DATA = [
@@ -297,6 +297,14 @@ const IndexPage = () => {
       }
       el.classList.add("white")
     }, 100)
+
+    setTimeout(() => {
+      const el = document.querySelector(".txt-list > li:first-of-type")
+      if (!el) {
+        return
+      }
+      el.classList.add("active")
+    }, 800)
   }
 
   function extractAttributeValue(str, attributeName) {
@@ -434,7 +442,7 @@ const IndexPage = () => {
       <div className="main-page">
         <Swiper
           // loop={true}
-          modules={[Pagination]}
+          modules={[Pagination, Mousewheel]}
           className="bg-swiper"
           spaceBetween={0}
           slidesPerView={1}
@@ -466,22 +474,29 @@ const IndexPage = () => {
             }
           }}
           onProgress={swiper => {
+            console.log("onProgress..", innerTranslate)
             for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress,
-                innerOffset = swiper.height * interleaveOffset,
-                innerTranslate = slideProgress * innerOffset
+              var slideProgress = swiper.slides[i].progress
+
+              var innerOffset = swiper.height * interleaveOffset
+              var innerTranslate = slideProgress * innerOffset
+              console.log(
+                slideProgress + ", " + innerOffset + "," + innerTranslate
+              )
               swiper.slides[i].querySelector(".bg-img").style.transform =
                 "translate3d(0, " + innerTranslate + "px, 0)"
             }
           }}
           onTouchStart={swiper => {
+            console.log("onTouchStart")
             for (var i = 0; i < swiper.slides.length; i++) {
               swiper.slides[i].style.transition = ""
             }
           }}
           onSetTransition={(swiper, transition) => {
+            console.log("onSetTransition")
             for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = transition
+              swiper.slides[i].style.transition = transition + "ms"
             }
           }}
         >
