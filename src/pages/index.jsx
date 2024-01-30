@@ -17,7 +17,8 @@ const DUMMY_DATA = [
     thumb_img: "/img/works/01.jpg",
     main_img: "/img/works/01/main_img.webp",
     hashtags: ["New_Media", "Contents_Design", "Branding"],
-    desc: "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
+    head_desc:
+      "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
     content: [
       "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
       "<h3>Welcome Zone: Stained Glass</h3>",
@@ -48,8 +49,8 @@ const DUMMY_DATA = [
       "<img src='/img/works/01/sub16.webp'/>",
       "<img src='/img/works/01/sub17.webp'/>",
       "<img src='/img/works/01/sub18.webp'/>",
-      "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
+    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
     notes: [
       { name: "Client", value: "LOTTE" },
       { name: "Period", value: "2022. 8 ~ 2023. 01" },
@@ -63,7 +64,8 @@ const DUMMY_DATA = [
     thumb_img: "/img/works/02.jpg",
     main_img: "/img/works/02/main_img.webp",
     hashtags: ["New_Media", "Contents_Design", "Branding"],
-    desc: "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
+    head_desc:
+      "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
     content: [
       "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
       "<h3>PR Zone: Art Forest</h3>",
@@ -85,8 +87,8 @@ const DUMMY_DATA = [
       "<img src='/img/works/02/sub08.webp'/>",
       "<img src='/img/works/02/sub09.webp'/>",
       "<img src='/img/works/02/sub10.webp'/>",
-      "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
+    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
     notes: [
       { name: "Client", value: "LOTTE" },
       { name: "Period", value: "2022. 8 ~ 2023. 01" },
@@ -100,7 +102,8 @@ const DUMMY_DATA = [
     thumb_img: "/img/works/03.jpg",
     main_img: "/img/works/03/main_img.webp",
     hashtags: ["New_Media", "Interactive", "AR"],
-    desc: "ABOARD utilized Hyundai Mobis' cutting-edge urban mobility platform, M.Vision TO, to create immersive media content at CES 2023. This content offers visitors the opportunity to directly and effectively experience a wide array of future city environments.",
+    head_desc:
+      "ABOARD utilized Hyundai Mobis' cutting-edge urban mobility platform, M.Vision TO, to create immersive media content at CES 2023. This content offers visitors the opportunity to directly and effectively experience a wide array of future city environments.",
     content: [
       "At CES 2023, New Gaze spearheaded a groundbreaking project in collaboration with Hyundai Mobis, centered around the use of their innovative urban mobility platform, M.Vision TO. Our mission was to craft immersive media content that allows visitors to experience an assortment of future city environments in a direct and highly effective manner.\n\nThrough M.Vision TO, we've harnessed the potential of cutting-edge technology to transport attendees into the heart of diverse urban landscapes. By leveraging our media content, we've made it possible for CES 2023 visitors to get up close and personal with the future of cities, showcasing how urban spaces can be efficiently and thoughtfully used. This project is a testament to our commitment to pushing the boundaries of what's possible in the realm of urban mobility and smart city development.",
       "<h3>M VISION TO : Augmented Reality</h3>",
@@ -120,8 +123,8 @@ const DUMMY_DATA = [
       "<img src='/img/works/03/sub09.webp'/>",
       "<img src='/img/works/03/sub10.webp'/>",
       "<img src='/img/works/03/sub11.webp'/>",
-      "Redefining Design, Bridging the Digital and Physical Divide. ",
     ],
+    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
     notes: [
       { name: "Client", value: "HYUNDAI MOBIS" },
       { name: "Period", value: "2022. 8 ~ 2023. 01" },
@@ -132,7 +135,7 @@ const DUMMY_DATA = [
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
   const [title2, setTitle2] = React.useState("")
-  const [projectIdx, setProjectIdx] = React.useState(-1)
+  const [projectIdx, setProjectIdx] = React.useState(0)
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -289,6 +292,10 @@ const IndexPage = () => {
   }
 
   function showPopup(index) {
+    if (index < 0 || DUMMY_DATA.length <= index) {
+      return
+    }
+
     const data = DUMMY_DATA[index]
     if (!data) {
       return
@@ -421,9 +428,6 @@ const IndexPage = () => {
           // }}
           onClick={swiper => {
             const index = swiper.activeIndex
-            if (index === 0) {
-              return
-            }
             showPopup(index)
           }}
           onSlideChange={swiper => {
