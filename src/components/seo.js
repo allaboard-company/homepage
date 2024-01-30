@@ -37,6 +37,10 @@ function Seo({ description, title, children }) {
         as="style"
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
       />
+      <link
+        href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css"
+        rel="stylesheet"
+      ></link>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
 

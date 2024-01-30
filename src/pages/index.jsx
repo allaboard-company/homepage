@@ -132,6 +132,7 @@ const DUMMY_DATA = [
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
   const [title2, setTitle2] = React.useState("")
+  const [projectIdx, setProjectIdx] = React.useState(-1)
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -266,13 +267,9 @@ const IndexPage = () => {
       el.classList.add("white")
     }, 100)
 
-    setTimeout(() => {
-      const el = document.querySelector(".txt-list > li:first-of-type")
-      if (!el) {
-        return
-      }
-      el.classList.add("active")
-    }, 800)
+    gsap.to(".project-title-wrap", { alpha: 1, delay: 1 })
+    setTitle1(DUMMY_DATA[0].title)
+    setTitle2(DUMMY_DATA[0].subtitle)
   }
 
   function extractAttributeValue(str, attributeName) {
@@ -291,13 +288,12 @@ const IndexPage = () => {
     return `<iframe src="https://player.vimeo.com/video/${vimeoId}" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`
   }
 
-  let currentIndex = -1
   function showPopup(index) {
-    currentIndex = index
     const data = DUMMY_DATA[index]
     if (!data) {
       return
     }
+    setProjectIdx(index)
 
     const {
       title,
@@ -395,11 +391,11 @@ const IndexPage = () => {
     })
 
     document.querySelector(".btn-left").addEventListener("click", function () {
-      showPopup(currentIndex - 1)
+      showPopup(projectIdx - 1)
     })
 
     document.querySelector(".btn-right").addEventListener("click", function () {
-      showPopup(currentIndex + 1)
+      showPopup(projectIdx + 1)
     })
   }
 
@@ -419,61 +415,38 @@ const IndexPage = () => {
           grabCursor={true}
           watchSlidesProgress={true}
           // grabCursor={true}
-          pagination={{
-            type: "bullets",
-            clickable: true,
-          }}
+          // pagination={{
+          //   type: "bullets",
+          //   clickable: true,
+          // }}
           onClick={swiper => {
             const index = swiper.activeIndex
             if (index === 0) {
               return
             }
-            showPopup(index - 1)
+            showPopup(index)
           }}
           onSlideChange={swiper => {
             const index = swiper.activeIndex
-            if (index === 0) {
-              gsap.to(".project-title-wrap", { alpha: 0 })
-              gsap.to(".txt-list", {
-                alpha: 1,
-                onComplete: () => {
-                  document.querySelector(".txt-list").style.display = "block"
-                },
-              })
-            } else {
-              gsap.to(".project-title-wrap", { alpha: 1 })
-              gsap.to(".txt-list", {
-                alpha: 0,
-                onComplete: () => {
-                  document.querySelector(".txt-list").style.display = "none"
-                },
-              })
-              setTitle1(DUMMY_DATA[index - 1].title)
-              setTitle2(DUMMY_DATA[index - 1].subtitle)
-            }
+            setTitle1(DUMMY_DATA[index].title)
+            setTitle2(DUMMY_DATA[index].subtitle)
           }}
           onProgress={swiper => {
-            console.log("onProgress..", innerTranslate)
             const interleaveOffset = 0.9
             for (const slide of swiper.slides) {
               var slideProgress = slide.progress
               var innerOffset = swiper.height * interleaveOffset
               var innerTranslate = slideProgress * innerOffset
-              console.log(
-                slideProgress + ", " + innerOffset + "," + innerTranslate
-              )
               slide.querySelector(".bg-img").style.transform =
                 "translate3d(0, " + innerTranslate + "px, 0)"
             }
           }}
           onTouchStart={swiper => {
-            console.log("onTouchStart")
             for (const slide of swiper.slides) {
               slide.style.transition = ""
             }
           }}
           onSetTransition={(swiper, transition) => {
-            console.log("onSetTransition")
             for (const slide of swiper.slides) {
               slide.style.transition = transition + "ms"
               slide.querySelector(".bg-img").style.transition =
@@ -481,9 +454,6 @@ const IndexPage = () => {
             }
           }}
         >
-          <SwiperSlide>
-            <div className="bg-img" style={{ backgroundColor: "black" }}></div>
-          </SwiperSlide>
           {DUMMY_DATA.map(item => {
             return (
               <SwiperSlide>
@@ -505,12 +475,6 @@ const IndexPage = () => {
             <li></li>
             <li></li>
             <li></li>
-          </ul>
-          <ul className="txt-list">
-            <li>
-              <span>WELCOME</span>
-              <span>ABOARD</span>
-            </li>
           </ul>
         </Swiper>
         <div className="project-title-wrap">
