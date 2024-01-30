@@ -230,6 +230,7 @@
   background-color: white;
   z-index: 99;
   overflow-y: auto;
+  font-family: "Noto Sans Korean", sans-serif !important;
 
   .btn-close {
     position: fixed;
@@ -255,7 +256,6 @@
     overflow: hidden;
 
     color: #000;
-    font-family: "Noto Sans";
     font-size: 32px;
     font-style: normal;
     font-weight: 300;
@@ -263,11 +263,11 @@
 
     h2 {
       color: #000;
-      font-family: "Noto Sans";
       font-size: 72px;
       font-style: normal;
       font-weight: 700;
       line-height: 74px; /* 102.778% */
+      font-family: Pretendard;
     }
 
     .hashtags {
@@ -300,7 +300,6 @@
         margin-bottom: 60px;
         color: #000;
         text-align: center;
-        font-family: "Noto Sans";
         font-size: 48px;
         font-style: normal;
         font-weight: 300;
