@@ -231,6 +231,21 @@
   z-index: 99;
   overflow-y: auto;
   font-family: "Noto Sans Korean", sans-serif !important;
+  white-space: pre-line;
+
+  // &::after {
+  //   display: block;
+  //   content: " ";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 3000vh;
+  //   background: url(/img/sample/work_detail.png);
+  //   object-fit: contain;
+  //   background-size: contain;
+  //   opacity: 0.8;
+  // }
 
   .btn-close {
     position: fixed;
@@ -435,6 +450,8 @@
       }
 
       .inner-container {
+        text-align: center;
+
         h3 {
           margin-top: 180rem;
           margin-bottom: 60rem;
@@ -453,11 +470,11 @@
             background-color: black;
           }
         }
-      }
 
-      img,
-      .video-wrap {
-        margin-top: 40rem !important;
+        img,
+        .video-wrap {
+          margin-top: 40rem;
+        }
       }
 
       .notes {

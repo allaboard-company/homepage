@@ -189,6 +189,7 @@ const IndexPage = () => {
       main_img,
       hashtags,
       head_desc,
+      head_desc2,
       foot_desc,
       content,
       notes = [],
@@ -215,6 +216,10 @@ const IndexPage = () => {
       html += `<img class="main-img" src="${main_img}"/>`
     }
 
+    if (head_desc2) {
+      html += `<p>${head_desc2}</p>`
+    }
+
     if (content) {
       html += '<div class="inner-container">'
       html += content
@@ -233,6 +238,7 @@ const IndexPage = () => {
               vimeoId
             )}</div>`
           }
+
           return item
         })
         .join("")
