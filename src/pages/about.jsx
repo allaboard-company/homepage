@@ -11,30 +11,29 @@ const AboutPage = () => {
 
   async function init() {
     gsap.utils.toArray(".stair-item").forEach(item => {
-      gsap.to(item, {
-        yPercent: -50,
-        duration: 0,
-      })
-
-      gsap.to(item, {
-        yPercent: -50,
-        ease: "none",
-        duration: 0.5,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "bottom top",
-          // markers: true,
-          scrub: 0.5,
-        },
-      })
+      gsap.fromTo(
+        item,
+        { yPercent: 0 },
+        {
+          yPercent: -50,
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "bottom top",
+            // markers: true,
+            scrub: 0.5,
+          },
+        }
+      )
     })
 
-    gsap.to(".about-page", {
-      duration: 0.3,
-      opacity: 1,
-    })
+    setTimeout(() => {
+      document.querySelectorAll(".stair-item").forEach(el => {
+        el.style.opacity = 1
+      })
+    }, 600)
   }
 
   return (

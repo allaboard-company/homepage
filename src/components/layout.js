@@ -19,10 +19,10 @@ const Layout = ({ pageName, children }) => {
     if (window.Lenis) {
       const lenis = new window.Lenis({
         // duration: 1.2,
-        // easing: t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-        // direction: "vertical",
-        // gestureDirection: "vertical",
-        // smooth: true,
+        easing: t => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smooth: true,
         // smoothTouch: false,
         // touchMultiplier: 2,
       })
@@ -43,12 +43,14 @@ const Layout = ({ pageName, children }) => {
       gsap.ticker.lagSmoothing(0)
     }
 
-    document.body.classList.remove("loading")
     AOS.init({
-      offset: 30,
-      duration: 600,
-      easing: "ease-in-out",
+      // offset: 20,
+      delay: 0,
+      duration: 1000,
+      easing: "ease-out-sine",
     })
+
+    document.body.classList.add("loaded")
   }
 
   return (

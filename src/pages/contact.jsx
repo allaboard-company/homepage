@@ -9,7 +9,9 @@ const ContactPage = () => {
     init()
   }, [])
 
-  async function init() {}
+  async function init() {
+    document.querySelector(".contact-page").classList.add("loaded")
+  }
 
   return (
     <Layout pageName="contact">
