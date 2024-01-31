@@ -16,15 +16,6 @@ const Layout = ({ pageName, children }) => {
   }, [])
 
   async function init() {
-    if (document.querySelector(".btn-top")) {
-      document.querySelector(".btn-top").addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth", // 부드러운 스크롤 효과
-        })
-      })
-    }
-
     if (window.Lenis) {
       const lenis = new window.Lenis({
         // duration: 1.2,

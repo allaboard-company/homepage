@@ -9,133 +9,14 @@ import "swiper/css"
 import "swiper/css/pagination"
 import { Pagination, Mousewheel } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import Footer from "../components/footer"
+import DUMMY_DATA from "../data/dummy"
 
-const DUMMY_DATA = [
-  {
-    title: "LOTTE EBC #1",
-    subtitle: "Lotte Executive Briefing Center\nWELCOME",
-    thumb_img: "/img/works/01.jpg",
-    main_img: "/img/works/01/main_img.webp",
-    hashtags: ["New_Media", "Contents_Design", "Branding"],
-    head_desc:
-      "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
-    content: [
-      "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
-      "<h3>Welcome Zone: Stained Glass</h3>",
-      "In the Welcome Zone, the iconic LOTTE World Tower in Seoul is transformed into a captivating and beautiful panorama through transparent displays, showcasing a vibrant array of patterns.",
-      "<vimeo id='https://vimeo.com/875463114'/>",
-      "<img src='/img/works/01/sub01.webp'/>",
-      "<img src='/img/works/01/sub02.webp'/>",
-      "<img src='/img/works/01/sub03.webp'/>",
-      "<img src='/img/works/01/sub04.webp'/>",
-      "<h3>Welcome Zone: LOTTE Value Element</h3>",
-      "LOTTE Group's businesses are visually represented through trendy objects and dynamic motions, creating a spectacular presentation of materials and properties.",
-      "<vimeo id='https://vimeo.com/875463114'/>",
-      "<img src='/img/works/01/sub05.webp'/>",
-      "<img src='/img/works/01/sub06.webp'/>",
-      "<img src='/img/works/01/sub07.webp'/>",
-      "<img src='/img/works/01/sub08.webp'/>",
-      "<img src='/img/works/01/sub09.webp'/>",
-      "<img src='/img/works/01/sub18.webp'/>",
-      "<img src='/img/works/01/sub10.webp'/>",
-      "<img src='/img/works/01/sub11.webp'/>",
-      "<img src='/img/works/01/sub12.webp'/>",
-      "<img src='/img/works/01/sub13.webp'/>",
-      "<img src='/img/works/01/sub14.webp'/>",
-      "<h3>Welcome Zone: Space LOTTE</h3>",
-      "Transparent displays recreate the awe-inspiring sky view from the 113th floor, symbolizing LOTTE's boundless potential and limitless opportunities.",
-      "<vimeo id='https://vimeo.com/875516173'/>",
-      "<img src='/img/works/01/sub15.webp'/>",
-      "<img src='/img/works/01/sub16.webp'/>",
-      "<img src='/img/works/01/sub17.webp'/>",
-      "<img src='/img/works/01/sub18.webp'/>",
-    ],
-    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
-    notes: [
-      { name: "Client", value: "LOTTE" },
-      { name: "Period", value: "2022. 8 ~ 2023. 01" },
-      { name: "Project Note.", value: "LED Display Contents" },
-    ],
-  },
-  {
-    thumb_src: "/img/works/02.jpg",
-    title: "LOTTE EBC #2",
-    subtitle: "Lotte Executive Briefing Center\nWELCOME",
-    thumb_img: "/img/works/02.jpg",
-    main_img: "/img/works/02/main_img.webp",
-    hashtags: ["New_Media", "Contents_Design", "Branding"],
-    head_desc:
-      "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
-    content: [
-      "ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.",
-      "<h3>PR Zone: Art Forest</h3>",
-      "The Art Forest in the PR Zone expands the perception of limited space, creating a sense of openness. As light filters through the forest, it transforms into a captivating and ever-changing fantasy.",
-      "<vimeo id='https://vimeo.com/875532472'/>",
-      "<img src='/img/works/02/sub01.webp'/>",
-      "<img src='/img/works/02/sub02.webp'/>",
-      "<img src='/img/works/02/sub03.webp'/>",
-      "<h3>PR Zone: SECRET GARDEN</h3>",
-      "In the Secret Garden, the use of diverse window patterns creates an illusion of expanded space. It presents a fantasy representation of what unfolds within a hidden garden.",
-      "<vimeo id='https://vimeo.com/875531297'/>",
-      "<img src='/img/works/02/sub04.webp'/>",
-      "<img src='/img/works/02/sub05.webp'/>",
-      "<img src='/img/works/02/sub06.webp'/>",
-      "<img src='/img/works/02/sub07.webp'/>",
-      "<h3>PR Zone: CLOUD</h3>",
-      "The Clouds in this zone symbolize the altitude of the 113th floor, dynamically transforming through time to create a fantastical representation of various cloud formations.",
-      "<vimeo id='https://vimeo.com/875531937'/>",
-      "<img src='/img/works/02/sub08.webp'/>",
-      "<img src='/img/works/02/sub09.webp'/>",
-      "<img src='/img/works/02/sub10.webp'/>",
-    ],
-    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
-    notes: [
-      { name: "Client", value: "LOTTE" },
-      { name: "Period", value: "2022. 8 ~ 2023. 01" },
-      { name: "Project Note.", value: "LED Display Contents" },
-    ],
-  },
-  {
-    thumb_src: "/img/works/03.jpg",
-    title: "MOBIS CES",
-    subtitle: "Hyundai Mobis CES Show 2023",
-    thumb_img: "/img/works/03.jpg",
-    main_img: "/img/works/03/main_img.webp",
-    hashtags: ["New_Media", "Interactive", "AR"],
-    head_desc:
-      "ABOARD utilized Hyundai Mobis' cutting-edge urban mobility platform, M.Vision TO, to create immersive media content at CES 2023. This content offers visitors the opportunity to directly and effectively experience a wide array of future city environments.",
-    content: [
-      "At CES 2023, New Gaze spearheaded a groundbreaking project in collaboration with Hyundai Mobis, centered around the use of their innovative urban mobility platform, M.Vision TO. Our mission was to craft immersive media content that allows visitors to experience an assortment of future city environments in a direct and highly effective manner.\n\nThrough M.Vision TO, we've harnessed the potential of cutting-edge technology to transport attendees into the heart of diverse urban landscapes. By leveraging our media content, we've made it possible for CES 2023 visitors to get up close and personal with the future of cities, showcasing how urban spaces can be efficiently and thoughtfully used. This project is a testament to our commitment to pushing the boundaries of what's possible in the realm of urban mobility and smart city development.",
-      "<h3>M VISION TO : Augmented Reality</h3>",
-      "Our project focuses on optimizing the passenger experience through the development of user-friendly interfaces. This includes the creation of Meta Contents UX.I and Proactive UX. Our goal is to provide passengers with immersive, seamless, and interactive experiences during their journeys, setting new standards in transportation industry interface development.",
-      "<img src='/img/works/03/sub01.webp'/>",
-      "<h3>LED TRI - SCREEN : DRIVING FILM</h3>",
-      "We've created large LED tri-screen videos to provide an immersive experience of driving through a future city. These videos are seamlessly integrated with M.VISION TO vehicles to deliver a real-life, futuristic urban journey.",
-      "<vimeo id='https://vimeo.com/875553839'/>",
-      "<img src='/img/works/03/sub01.webp'/>",
-      "<img src='/img/works/03/sub02.webp'/>",
-      "<img src='/img/works/03/sub03.webp'/>",
-      "<img src='/img/works/03/sub04.webp'/>",
-      "<img src='/img/works/03/sub05.webp'/>",
-      "<img src='/img/works/03/sub06.webp'/>",
-      "<img src='/img/works/03/sub07.webp'/>",
-      "<img src='/img/works/03/sub08.webp'/>",
-      "<img src='/img/works/03/sub09.webp'/>",
-      "<img src='/img/works/03/sub10.webp'/>",
-      "<img src='/img/works/03/sub11.webp'/>",
-    ],
-    foot_desc: "Redefining Design, Bridging the Digital and Physical Divide. ",
-    notes: [
-      { name: "Client", value: "HYUNDAI MOBIS" },
-      { name: "Period", value: "2022. 8 ~ 2023. 01" },
-      { name: "Project Note.", value: "LED Display, AR" },
-    ],
-  },
-]
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
   const [title2, setTitle2] = React.useState("")
-  const [projectIdx, setProjectIdx] = React.useState(0)
+  const [number, setNumber] = React.useState(DUMMY_DATA.length)
+  let projectIdx = 0
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -300,7 +181,8 @@ const IndexPage = () => {
     if (!data) {
       return
     }
-    setProjectIdx(index)
+
+    projectIdx = index
 
     const {
       title,
@@ -326,7 +208,7 @@ const IndexPage = () => {
     }
 
     if (head_desc) {
-      html += `<p class="desc float-right">${head_desc}</p>`
+      html += `<p class="desc head-desc">${head_desc}</p>`
     }
 
     if (main_img) {
@@ -410,7 +292,6 @@ const IndexPage = () => {
     <Layout pageName="index">
       <div className="main-page">
         <Swiper
-          // loop={true}
           modules={[Pagination, Mousewheel]}
           className="bg-swiper"
           spaceBetween={0}
@@ -432,6 +313,7 @@ const IndexPage = () => {
           }}
           onSlideChange={swiper => {
             const index = swiper.activeIndex
+            setNumber(DUMMY_DATA.length - index)
             setTitle1(DUMMY_DATA[index].title)
             setTitle2(DUMMY_DATA[index].subtitle)
           }}
@@ -482,6 +364,7 @@ const IndexPage = () => {
           </ul>
         </Swiper>
         <div className="project-title-wrap">
+          <p className="number">{number}</p>
           <p className="title">{title1}</p>
           <p className="subtitle">{title2}</p>
         </div>
@@ -494,6 +377,7 @@ const IndexPage = () => {
           <button className="btn-left"></button>
           <button className="btn-right"></button>
         </div>
+        <Footer pageName={"work"} />
       </div>
     </Layout>
   )
