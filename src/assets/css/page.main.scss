@@ -57,7 +57,7 @@
   .project-title-wrap {
     position: absolute;
     left: 0;
-    top: 139px;
+    top: 181px;
     width: auto;
     height: auto;
     z-index: 9;
@@ -65,61 +65,34 @@
     padding: 0 70px;
     opacity: 0;
 
-    .number {
-      color: #000;
-      font-family: Pretendard;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-    }
-
     .title {
-      position: fixed;
-      right: 70px;
-      bottom: 55px;
-      color: #fff;
-
       font-family: Pretendard;
-      font-size: 48px;
+      font-size: 72px;
       font-style: normal;
       font-weight: 700;
-      line-height: normal;
+      line-height: 1.05556;
     }
 
     .subtitle {
-      margin-top: 10px;
+      margin-top: 16px;
       color: #000;
-      font-family: "Pretendard Variable";
-      font-size: 20px;
+      font-family: Pretendard;
+      font-size: 32px;
       font-style: normal;
       font-weight: 300;
-      line-height: normal;
+      line-height: 1.1875;
     }
 
     @media screen and (max-width: 767px) {
-      .number {
-        position: fixed;
-        top: 240rem;
-        left: 40rem;
-        font-size: 28px;
-      }
+      top: 176rem;
+      padding: 0 40rem;
 
       .title {
-        position: fixed;
-        right: 40rem;
-        bottom: 40rem;
-        color: #fff;
-        text-align: right;
-        font-family: Pretendard;
-        font-size: 38px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        font-size: 72rem;
       }
 
       .subtitle {
-        display: none;
+        font-size: 32rem;
       }
     }
   }

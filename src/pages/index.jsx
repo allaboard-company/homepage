@@ -10,12 +10,11 @@ import "swiper/css/pagination"
 import { Pagination, Mousewheel } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Footer from "../components/footer"
-import DUMMY_DATA from "../data/dummy"
+import WORK_LIST from "../../data/works.json"
 
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
   const [title2, setTitle2] = React.useState("")
-  const [number, setNumber] = React.useState(DUMMY_DATA.length)
   let projectIdx = 0
 
   React.useEffect(() => {
@@ -72,7 +71,7 @@ const IndexPage = () => {
         {
           duration: 1,
           width: "100%",
-          height: itemSize * 3,
+          height: itemSize * 3.542,
           ease: Power2.easeOut,
         }
       )
@@ -89,7 +88,7 @@ const IndexPage = () => {
           duration: 0.9,
           x: 0,
           width: "100%",
-          height: itemSize * 2,
+          height: itemSize * 2.542,
           ease: Power2.easeOut,
           delay: 0.1,
         }
@@ -107,7 +106,7 @@ const IndexPage = () => {
           duration: 0.8,
           x: 0,
           width: "100%",
-          height: itemSize * 1,
+          height: itemSize * 1.542,
           ease: Power2.easeOut,
           delay: 0.2,
         }
@@ -152,8 +151,8 @@ const IndexPage = () => {
     }, 100)
 
     gsap.to(".project-title-wrap", { alpha: 1, delay: 1 })
-    setTitle1(DUMMY_DATA[0].title)
-    setTitle2(DUMMY_DATA[0].subtitle)
+    setTitle1(WORK_LIST[0].title)
+    setTitle2(WORK_LIST[0].subtitle)
   }
 
   function extractAttributeValue(str, attributeName) {
@@ -173,14 +172,15 @@ const IndexPage = () => {
   }
 
   function showPopup(index) {
-    if (index < 0 || DUMMY_DATA.length <= index) {
+    if (index < 0 || WORK_LIST.length <= index) {
       return
     }
 
-    const data = DUMMY_DATA[index]
+    const data = WORK_LIST[index]
     if (!data) {
       return
     }
+    document.querySelector(".work-detail-page .container").innerHTML = ""
 
     projectIdx = index
 
@@ -189,7 +189,6 @@ const IndexPage = () => {
       main_img,
       hashtags,
       head_desc,
-      head_desc2,
       foot_desc,
       content,
       notes = [],
@@ -209,19 +208,15 @@ const IndexPage = () => {
     }
 
     if (head_desc) {
-      html += `<p class="desc head-desc">${head_desc}</p>`
+      html += `<p class="inner-container float-right">${head_desc}</p>`
     }
 
     if (main_img) {
       html += `<img class="main-img" src="${main_img}"/>`
     }
 
-    if (head_desc2) {
-      html += `<p>${head_desc2}</p>`
-    }
-
     if (content) {
-      html += '<div class="inner-container">'
+      html += '<div class="content">'
       html += content
         .map(item => {
           if (item.startsWith("<vimeo")) {
@@ -246,11 +241,11 @@ const IndexPage = () => {
     }
 
     if (foot_desc) {
-      html += `<p class="desc">${foot_desc}</p>`
+      html += `<p class="inner-container">${foot_desc}</p>`
     }
 
     if (notes.length > 0) {
-      html += '<ul class="notes">'
+      html += '<ul class="notes inner-container"">'
       html += notes
         .map(item => {
           return `<li class="text"><span>${item["name"]}</span>${item["value"]}</li>`
@@ -259,7 +254,9 @@ const IndexPage = () => {
       html += "</ul>"
     }
 
+    document.querySelector(".work-detail-page").scrollTo({ top: 0 })
     document.querySelector(".work-detail-page .container").innerHTML = html
+
     setTimeout(() => {
       document.body.classList.add("show-full-popup")
       const el = document.querySelector(".work-detail-page")
@@ -319,9 +316,8 @@ const IndexPage = () => {
           }}
           onSlideChange={swiper => {
             const index = swiper.activeIndex
-            setNumber(DUMMY_DATA.length - index)
-            setTitle1(DUMMY_DATA[index].title)
-            setTitle2(DUMMY_DATA[index].subtitle)
+            setTitle1(WORK_LIST[index].title)
+            setTitle2(WORK_LIST[index].subtitle)
           }}
           onProgress={swiper => {
             const interleaveOffset = 0.9
@@ -346,7 +342,7 @@ const IndexPage = () => {
             }
           }}
         >
-          {DUMMY_DATA.map(item => {
+          {WORK_LIST.map(item => {
             return (
               <SwiperSlide>
                 <div
@@ -370,7 +366,6 @@ const IndexPage = () => {
           </ul>
         </Swiper>
         <div className="project-title-wrap">
-          <p className="number">{number}</p>
           <p className="title">{title1}</p>
           <p className="subtitle">{title2}</p>
         </div>

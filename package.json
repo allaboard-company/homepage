@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ABoard",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Aboard website",
+  "version": "1.0.0",
+  "author": "s@typer.kr",
   "dependencies": {
     "aos": "^2.3.4",
     "gatsby": "^5.13.0",
@@ -39,9 +39,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/allaboard-company/homepage.git"
   }
 }
