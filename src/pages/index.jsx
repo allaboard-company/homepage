@@ -10,7 +10,7 @@ import "swiper/css/pagination"
 import { Pagination, Mousewheel } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import Footer from "../components/footer"
-import WORK_LIST from "../../data/works.json"
+import WORK_LIST from "../../static/data/works.json"
 
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
