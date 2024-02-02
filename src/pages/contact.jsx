@@ -1,5 +1,5 @@
 import * as React from "react"
-// import { StaticImage } from "gatsby-plugin-image"
+import gsap, { Power2 } from "gsap"
 import "../assets/css/page.contact.scss"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -10,14 +10,50 @@ const ContactPage = () => {
   }, [])
 
   async function init() {
-    document.querySelector(".contact-page").classList.add("loaded")
+    gsap.fromTo(
+      ".contact-page",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1.2,
+        ease: Power2.easeOut,
+      }
+    )
+
+    gsap.fromTo(
+      ".contact-page .info-area",
+      {
+        width: "50%",
+      },
+      {
+        width: "100%",
+        duration: 3,
+        ease: "Expo.easeOut",
+      }
+    )
+
+    gsap.fromTo(
+      ".contact-page h1, .contact-page ul li, .contact-page a",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "Expo.easeInOut",
+        delay: 0.3,
+      }
+    )
+
+    // document.querySelector(".contact-page").classList.add("loaded")
   }
 
   return (
     <Layout pageName="contact">
       <div className="contact-page">
-        <div></div>
-        <div>
+        <div className="img-area"></div>
+        <div className="info-area">
           <div>
             <h1>Contact us</h1>
             <ul>

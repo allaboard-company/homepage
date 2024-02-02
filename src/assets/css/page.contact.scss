@@ -10,12 +10,12 @@
       width: 100%;
       box-sizing: border-box;
 
-      &:first-of-type {
+      &.img-area {
         background: url(/img/contact_us.webp) center no-repeat;
         background-size: 100%;
       }
 
-      &:last-of-type {
+      &.info-area {
         display: flex;
         align-items: center;
 
@@ -32,8 +32,6 @@
           font-style: normal;
           font-weight: 700;
           line-height: 1.02778;
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
         }
 
         ul {
@@ -41,9 +39,6 @@
           display: flex;
           flex-flow: column;
           gap: 40px;
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
-          transition-delay: 0.2s;
 
           li {
             color: #000;
@@ -65,9 +60,6 @@
           line-height: 20px; /* 125% */
           text-transform: uppercase;
           border-bottom: 1px solid black;
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
-          transition-delay: 0.4s;
         }
 
         .copyright {
@@ -105,13 +97,13 @@
     > div {
       width: 100%;
 
-      &:first-of-type {
+      &.img-area {
         background: url(/img/contact_us.webp) center no-repeat;
         background-size: cover;
         height: 112.5vw;
       }
 
-      &:last-of-type {
+      &.info-area {
         display: flex;
         align-items: center;
 
@@ -163,18 +155,6 @@
           display: none;
         }
       }
-    }
-  }
-
-  &:not(.loaded) > div:last-of-type {
-    h1 {
-      opacity: 0;
-    }
-    ul {
-      opacity: 0;
-    }
-    .map-link {
-      opacity: 0;
     }
   }
 }

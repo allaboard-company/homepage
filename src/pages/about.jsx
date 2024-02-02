@@ -10,6 +10,19 @@ const AboutPage = () => {
   }, [])
 
   async function init() {
+    gsap.fromTo(
+      ".sec1",
+      {
+        opacity: 0,
+        transform: "scale(1.1)",
+      },
+      {
+        opacity: 1,
+        transform: "scale(1)",
+        duration: 1,
+      }
+    )
+
     gsap.utils.toArray(".stair-item").forEach(item => {
       gsap.fromTo(
         item,
