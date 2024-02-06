@@ -114,6 +114,10 @@ const IndexPage = () => {
       )
     }
 
+    gsap.to(".toggle-menu-btn .bar", {
+      stroke: isMobile ? "black" : "white",
+    })
+
     gsap.to(".copyright", {
       color: "white",
       // ease: Power2.easeOut,
