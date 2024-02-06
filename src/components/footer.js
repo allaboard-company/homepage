@@ -1,11 +1,12 @@
 import * as React from "react"
+
 const Footer = ({ pageName }) => {
   if (pageName !== "about" && pageName !== "work") {
     return <></>
   }
 
   function scrollToTop() {
-    if (pageName == "work") {
+    if (pageName === "work") {
       document.querySelector(".work-detail-page").scrollTo({ top: 0 })
     } else {
       window.scrollTo({

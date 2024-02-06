@@ -133,6 +133,11 @@
     z-index: 9;
     pointer-events: none;
 
+    @media screen and (min-width: 768px) {
+      height: 60vw;
+      bottom: auto;
+    }
+
     @media screen and (max-width: 767px) {
       flex-flow: row;
     }

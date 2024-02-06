@@ -30,14 +30,13 @@ const IndexPage = () => {
   async function handleResize() {
     const isMobile = window.innerWidth < 768
     if (!isMobile) {
-      let itemSize = window.innerHeight / 3
-      itemSize =
-        window.innerWidth < itemSize * 4 ? window.innerWidth / 4 : itemSize
+      let itemSize = window.innerWidth / 5
       gsap.to(".white-bars > li:first-of-type", {
         duration: 1,
-        width: "50%",
+        width: "60%",
         x: 0,
         y: 0,
+        height: itemSize,
         ease: Power2.easeOut,
       })
 
@@ -45,7 +44,8 @@ const IndexPage = () => {
         duration: 0.9,
         x: -itemSize,
         y: 0,
-        width: "50%",
+        width: "60%",
+        height: itemSize,
         ease: Power2.easeOut,
         delay: 0.1,
       })
@@ -54,7 +54,8 @@ const IndexPage = () => {
         duration: 0.8,
         x: -itemSize * 2,
         y: 0,
-        width: "50%",
+        width: "60%",
+        height: itemSize,
         ease: Power2.easeOut,
         delay: 0.2,
       })
