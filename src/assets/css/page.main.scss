@@ -142,24 +142,32 @@
     right: 0;
     bottom: 0;
     display: flex;
-    flex-flow: column;
     width: 100%;
     height: 100%;
     z-index: 9;
     pointer-events: none;
 
+    > li {
+      background-color: white;
+    }
+
     @media screen and (min-width: 768px) {
-      height: 60vw;
+      width: auto;
       bottom: auto;
+      flex-flow: column;
+
+      > li {
+        left: auto;
+        height: 20vw;
+      }
     }
 
     @media screen and (max-width: 767px) {
       flex-flow: row;
-    }
 
-    > li {
-      background-color: white;
-      height: 100%;
+      > li {
+        height: 100%;
+      }
     }
   }
 
