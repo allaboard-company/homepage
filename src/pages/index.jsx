@@ -353,7 +353,7 @@ const IndexPage = () => {
                 <div
                   className="bg-img"
                   style={{
-                    background: `url("${item["main_img"]}")`,
+                    background: `url("${item["thumb_img"]}")`,
                   }}
                 ></div>
                 <p className="title">${item["title"]}</p>
