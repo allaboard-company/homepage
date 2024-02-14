@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaboard=self.webpackChunkaboard||[]).push([[883],{429:function(e,t,n){n.r(t),n.d(t,{Head:function(){return r}});var a=n(7294),u=n(3239),l=n(9357);const r=()=>a.createElement(l.Z,{title:"404: Not Found"});t.default=()=>a.createElement(u.Z,null,a.createElement("h1",null,"404: Not Found"))}}]);
+//# sourceMappingURL=component---src-pages-404-js-58d427bb69fcb96dbc03.js.map
