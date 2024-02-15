@@ -207,23 +207,24 @@
     "hashtags": ["Application", "Physical Interaction", "Lighting"],
     "head_desc":"Linked with the charging system through indirect lighting that illuminates the charging booth. We have built a lighting control system that can intuitively recognize the amount of charge.",
     "content": [
-      "<p class='inner-container'>At CES 2023, New Gaze spearheaded a groundbreaking project in collaboration with Hyundai Mobis, centered around the use of their innovative urban mobility platform, M.Vision TO. Our mission was to craft immersive media content that allows visitors to experience an assortment of future city environments in a direct and highly effective manner.\n\nThrough M.Vision TO, we've harnessed the potential of cutting-edge technology to transport attendees into the heart of diverse urban landscapes. By leveraging our media content, we've made it possible for CES 2023 visitors to get up close and personal with the future of cities, showcasing how urban spaces can be efficiently and thoughtfully used. This project is a testament to our commitment to pushing the boundaries of what's possible in the realm of urban mobility and smart city development.</p>",
 
-      "<h3>M VISION TO : Augmented Reality</h3>",
-      "<p>Our project focuses on optimizing the passenger experience through the development of user-friendly interfaces. This includes the creation of Meta Contents UX.I and Proactive UX. Our goal is to provide passengers with immersive, seamless, and interactive experiences during their journeys, setting new standards in transportation industry interface development.</p>",
+      "<h3>Evolutionizing EV Charging Experience</h3>",
+      "<p>At ABOARD, innovation meets sustainability with our groundbreaking project — a cutting-edge lighting system integrated into electric vehicle (EV) charging booths.</p>",
 
-      "<img src='/img/works/08/8_1.gif'/>",
+      "<img src='/img/works/07/sub01.webp'/>",
       
-      "<h3>LED TRI - SCREEN : DRIVING FILM</h3>",
-      "<p>We've created large LED tri-screen videos to provide an immersive experience of driving through a future city. These videos are seamlessly integrated with M.VISION TO vehicles to deliver a real-life, futuristic urban journey.</p>",
-      "<vimeo id='https://vimeo.com/875553839'/>",
-      "<img src='/img/works/08/sub01.webp'/>",
-      "<img src='/img/works/08/sub02.webp'/>",
-      "<img src='/img/works/08/sub03.webp'/>",
-      "<img src='/img/works/08/sub04.webp'/>",
-      "<img src='/img/works/08/sub05.webp'/>",
-      "<img src='/img/works/08/sub06.webp'/>",
-      "<img src='/img/works/08/sub07.webp'/>"
+      "<h3>Lighting Design</h3>",
+      "<p>Based on Standard Energy’s unique colors By distinguishing between saturation and color, the charge amount can be intuitively recognized. Even when starting or ending charging and in unexpected event situations. We created a system to give messages indirectly.</p>",
+
+      "<img src='/img/works/07/sub02.webp'/>",
+      "<img src='/img/works/07/sub03.webp'/>",
+
+      "<h3>System Integration</h3>",
+      "<p>Displays information on the screen according to the current progress status. It was designed to be managed and controlled manually through mobile.</p>",
+      "<img src='/img/works/07/sub04.webp'/>",
+      "<img src='/img/works/07/sub05.webp'/>"
+
+
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide. ",
     "notes": [
