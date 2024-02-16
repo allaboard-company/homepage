@@ -54,7 +54,7 @@
 
 
   {
-    "title": "HYUNDAI\nIONIQ CX LAB THAI",
+    "title": "IONIQ\nCX LAB THAI",
     "subtitle": "To Be Updated",
     "thumb_img": "/img/works/13/landing_img.png",
     "hashtags": ["CX", "Retail Experience"],
@@ -66,7 +66,7 @@
 
 
   {
-    "title": "NAVER DATA CENTER\nTOUR MEDIA",
+    "title": "NAVER\nDATA CENTER",
     "subtitle": "To Be Updated",
     "thumb_img": "/img/works/14/landing_img.jpg",
     "hashtags": ["Brand Experience"],
@@ -137,6 +137,7 @@
       "<vimeo id='https://vimeo.com/875532472'/>",
       "<img src='/img/works/09/sub01.webp'/>",
       "<img src='/img/works/09/sub02.webp'/>",
+      "<img src='/img/works/09/9_1.gif'/>",
       
 
       "<h3>PR Zone: SECRET GARDEN</h3>",
@@ -145,6 +146,7 @@
       "<img src='/img/works/09/sub04.webp'/>",
       "<img src='/img/works/09/sub05.webp'/>",
       "<img src='/img/works/09/sub06.webp'/>",
+      "<img src='/img/works/09/9_2.gif'/>",
     
 
       "<h3>PR Zone: CLOUD</h3>",
@@ -177,7 +179,7 @@
       "<h3>M VISION TO : Augmented Reality</h3>",
       "<p>Our project focuses on optimizing the passenger experience through the development of user-friendly interfaces. This includes the creation of Meta Contents UX.I and Proactive UX. Our goal is to provide passengers with immersive, seamless, and interactive experiences during their journeys, setting new standards in transportation industry interface development.</p>",
 
-      
+      "<img src='/img/works/08/3_1.gif'/>",
       "<h3>LED TRI - SCREEN : DRIVING FILM</h3>",
       "<p>We've created large LED tri-screen videos to provide an immersive experience of driving through a future city. These videos are seamlessly integrated with M.VISION TO vehicles to deliver a real-life, futuristic urban journey.</p>",
       "<vimeo id='https://vimeo.com/875553839'/>",
@@ -200,7 +202,7 @@
 
 
   {
-    "title": "STANDARD ENERGY",
+    "title": "STANDARD\nENERGY",
     "subtitle": "Lighting Control System",
     "thumb_img": "/img/works/07/main_img.webp",
     "main_img": "/img/works/07/main_img.webp",
@@ -312,7 +314,7 @@
   },
 
   {
-    "title": "MOBIS SHOWROOM",
+    "title": "MOBIS\nSHOWROOM",
     "subtitle": "Hyundai Mobis Virtual Showroom",
     "thumb_img": "/img/works/03/main_img.webp",
     "main_img": "/img/works/03/main_img.webp",
@@ -326,6 +328,8 @@
       "<p>We introduced the vehicles and technologies in the same way as the vehicles shown at the offline exhibition, so that customers who could not see them in person could experience them indirectly online.</p>",
       "<img src='/img/works/03/sub01.webp'/>",
       "<img src='/img/works/03/sub02.webp'/>",
+      "<img src='/img/works/03/3_1.gif'/>",
+      "<img src='/img/works/03/3_2.gif'/>",
     
       "<img src='/img/works/03/sub03.webp'/>",
       
