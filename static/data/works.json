@@ -13,6 +13,7 @@
       "<p class='inner-container'>In the SmartThings Highlight Zone, located in the very center of the first floor. It provides interactive experience with intuitive contents for understanding basic concets of SamrtThings.\n\nIn the VIP zone on the 2nd floor, we created smart things applied to our lives based on the concept of residential, and we installed circadian lighting in the sleep zone.</p>",
 
       "<img src='/img/works/11/sub01.png'/>",
+      "<vimeo id='https://vimeo.com/913950117'/>",
 
 
       "<h3>Welcome Zone: Calm Onboarding</h3>",
@@ -116,7 +117,7 @@
     "notes": [
       { "name": "Client", "value": "LOTTE" },
       { "name": "Production", "value": "VINYL-I X NEWGAZE X ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2022. 12 ~ 2023. 03" },
       { "name": "Project Note.", "value": "LED Display Contents" }
     ]
   },
@@ -161,7 +162,7 @@
     "notes": [
       { "name": "Client", "value": "LOTTE" },
       { "name": "Production", "value": "VINYL-I X NEWGAZE X ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2022. 12 ~ 2023. 03" },
       { "name": "Project Note.", "value": "LED Display Contents" }
     ]
   },
@@ -195,7 +196,7 @@
     "notes": [
       { "name": "Client", "value": "HYUNDAI MOBIS" },
       { "name": "Production", "value": "VINYL-I X NEWGAZE X ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2021. 09 ~ 2022. 12" },
       { "name": "Project Note.", "value": "LED Display, AR" }
     ]
   },
@@ -232,7 +233,7 @@
     "notes": [
       { "name": "Client", "value": "HYUNDAI MOBIS" },
       { "name": "Production", "value": "Vinyl I X NEWGAZE X ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2020. 03 ~ 2020. 05" },
       { "name": "Project Note.", "value": "LED Display, AR" }
     ]
   },
@@ -261,7 +262,7 @@
     "notes": [
       { "name": "Client", "value": "CLEANTOPIA" },
       { "name": "Production", "value": "NEWGAZE x ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2023" },
       { "name": "Project Note.", "value": "GUI Design" }
     ]
   },
@@ -295,20 +296,18 @@
 
       "<h3>Modular & Optimized</h3>",
       "<p>Modularize content so that one or more properties can be accessed and utilized in various ways, It was designed with a focus on personal optimization so that the product line of interest can be presented with a focus.</p>",
-      "<img src='/img/works/04/sub01.webp'/>",
-      "<img src='/img/works/04/sub02.webp'/>",
-      "<img src='/img/works/04/sub03.webp'/>",
-      "<img src='/img/works/04/sub04.webp'/>",
-      "<img src='/img/works/04/sub05.webp'/>",
-      "<img src='/img/works/04/sub06.webp'/>",
-      "<img src='/img/works/04/sub07.webp'/>"
+      "<img src='/img/works/04/04_0.jpg'/>",
+      "<img src='/img/works/04/4_1.gif'/>",
+      "<img src='/img/works/04/sub4_2.png'/>",
+      "<img src='/img/works/04/sub4_3.png'/>"
+     
       
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide. ",
     "notes": [
       { "name": "Client", "value": "HYUNDAI MOBIS" },
       { "name": "Production", "value": "VINYL-I x NEWGAZE x ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2021. 09 ~ 2022. 01" },
       { "name": "Project Note.", "value": "UX/UI Design" }
     ]
   },
@@ -341,7 +340,7 @@
     "notes": [
       { "name": "Client", "value": "HYUNDAI MOBIS" },
       { "name": "Production", "value": "VINYL-I x NEWGAZE x ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2021. 10 ~ 2022. 01" },
       { "name": "Project Note.", "value": "UX/UI Design" }
     ]
   },
@@ -369,7 +368,7 @@
     "notes": [
       { "name": "Client", "value": "LG DISPLAY" },
       { "name": "Production", "value": "VINYL-I x NEWGAZE x ABOARD" },
-      { "name": "Period", "value": "2022. 8 ~ 2023. 01" },
+      { "name": "Period", "value": "2020" },
       { "name": "Project Note.", "value": "UX/UI Design" }
     ]
   }
