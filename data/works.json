@@ -1,37 +1,33 @@
 [
-
   {
     "title": "SAMSUNG\nCES 2024",
     "subtitle": "SmartThings Highlight Zone\nMedia Experience",
     "thumb_img": "/img/works/11/landing_img.jpg",
+    "thumb_m_img": "/img/works/11/landing_img.jpg",
     "main_img": "/img/works/11/main_img.jpg",
     "hashtags": ["New_Media", "Contents_Design", "Experience Design"],
     "head_desc": "At CES 2024, the world's best electronics show, Samsung Smart Things developed five characteristic user experience contents. In the highlight zone on the first floor, four features of Smart Things were introduced through interactive media, and in the lifestyle zone on the second floor, lighting experience content with home lifestyle as a motif was created.",
 
     "content": [
-      
       "<p class='inner-container'>In the SmartThings Highlight Zone, located in the very center of the first floor. It provides interactive experience with intuitive contents for understanding basic concets of SamrtThings.\n\nIn the VIP zone on the 2nd floor, we created smart things applied to our lives based on the concept of residential, and we installed circadian lighting in the sleep zone.</p>",
 
       "<img src='/img/works/11/sub01.png'/>",
-      "<vimeo id='https://vimeo.com/913950117'/>",
-
+      "<vimeo id='https://vimeo.com/913950117' ratio='56'/>",
 
       "<h3>Welcome Zone: Calm Onboarding</h3>",
       "<p>The Calm Onboarding content, which is the first to be encountered in the Smart Things Highlight Zone, intuitively visualizes the concept of simple onboarding of various home appliances in Smart Things without any special effort by connecting motion graphics and lighting to the home appliances actually on display.</p>",
       "<img src='/img/works/11/S03.png'/>",
       "<img src='/img/works/11/S02.png'/>",
       "<img src='/img/works/11/S04.png'/>",
-      
+
       "<h3>SmartThings Together</h3>",
       "<p>Smart Things Together uses three stories to demonstrate the ability to easily share home appliance control privileges with others through QR. Users select a story on the tablet or scan a QR to experience the story on the front TV or web.</p>",
       "<img src='/img/works/11/S05.png'/>",
-    
-
 
       "<h3>Map View</h3>",
       "<p>The map view, which consists of two podiums, a 60” TV, and a transparent acrylic diorama, shows the creation and use of the Smart Things map view through four stories: morning, going out, evening, and going to bed. The diorama media table shows the actual situation in the house through 3D video content. The two podiums show the control situation in the map view through UI motion.</p>",
       "<img src='/img/works/11/S06.png'/>",
-      
+
       "<h3>Your Home On TV</h3>",
       "<p>Your Home on TV shows a system for controlling smart things through a TV. Even while watching TV, you can seamlessly control CCTV and major home appliances, and detailed control is possible by linking with your mobile phone. This TV smart things experience was delivered in an easy and fun way through symbolic illustrations and actual TV UI.</p>",
       "<img src='/img/works/11/S07.png'/>",
@@ -40,8 +36,6 @@
       "<h3>Circadian Lighting</h3>",
       "<p>Circadian lighting is a system that adjusts indoor ambiance according to external light sources, namely the temperature of light throughout the day. In the bedroom, a central display featuring a concept of a window portrays the Las Vegas skyline. As the video transitions through night, dawn, afternoon, and dusk, the circadian lighting shifts from warm to neutral, crafting the atmosphere of the bedroom space.</p>",
       "<img src='/img/works/11/S10.png'/>"
-
-      
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide.",
     "notes": [
@@ -53,36 +47,31 @@
     ]
   },
 
-
   {
     "title": "IONIQ\nCX LAB THAI",
     "subtitle": "To Be Updated",
     "thumb_img": "/img/works/13/landing_img.png",
+    "thumb_m_img": "/img/works/13/landing_img.png",
     "hashtags": ["CX", "Retail Experience"],
 
-    "content": [
-      "<h3>To Be Updated</h3>"
-    ]
+    "content": ["<h3>To Be Updated</h3>"]
   },
-
 
   {
     "title": "NAVER\nDATA CENTER",
     "subtitle": "To Be Updated",
     "thumb_img": "/img/works/14/landing_img.jpg",
+    "thumb_m_img": "/img/works/14/landing_img.jpg",
     "hashtags": ["Brand Experience"],
 
-    "content": [
-      "<h3>To Be Updated</h3>"
-    ]
+    "content": ["<h3>To Be Updated</h3>"]
   },
 
-
   {
-
     "title": "LOTTE EBC #1",
     "subtitle": "Lotte Executive Briefing Center\nWelcome",
     "thumb_img": "/img/works/10/main_img.webp",
+    "thumb_m_img": "/img/works/10/main_img.webp",
     "main_img": "/img/works/10/main_img.webp",
     "hashtags": ["New_Media", "Contents_Design", "Branding"],
     "head_desc": "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision.\n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
@@ -97,7 +86,7 @@
       "<img src='/img/works/10/sub01.webp'/>",
       "<img src='/img/works/10/sub02.webp'/>",
       "<img src='/img/works/10/sub03.webp'/>",
-      
+
       "<h3>Welcome Zone: LOTTE Value Element</h3>",
       "<p>LOTTE Group's businesses are visually represented through trendy objects and dynamic motions, creating a spectacular presentation of materials and properties.</p>",
       "<vimeo id='https://vimeo.com/875508935'/>",
@@ -126,12 +115,12 @@
     "title": "LOTTE EBC #2",
     "subtitle": "Lotte Executive Briefing Center\nWelcome",
     "thumb_img": "/img/works/09/main_img.webp",
+    "thumb_m_img": "/img/works/09/main_img.webp",
     "main_img": "/img/works/09/main_img.webp",
     "hashtags": ["New_Media", "Contents_Design", "Branding"],
     "head_desc": "Our project focuses on the creation of a media space and content production that allows our VIP customers to experience the essence of LOTTE Group's values and vision. \n\nAt the LOTTE Executive Briefing Center, we've designed a unique space where you can engage with the rich history, innovation, and global impact that define LOTTE Group.",
     "content": [
       "<p class='inner-container'>ABOARD spearheaded the media content creation project for the revamped LOTTE EBC on the 113th floor of LOTTE Tower.\n\nWe've designed innovative media content for two key areas:\n\nThe Welcome Zone, where we extend a warm welcome to our VIP guests.\nThe PR Zone, where visitors can experience LOTTE's values and vision through tailored media messages.</p>",
-
 
       "<h3>PR Zone: Art Forest</h3>",
       "<p>The Art Forest in the PR Zone expands the perception of limited space, creating a sense of openness. As light filters through the forest, it transforms into a captivating and ever-changing fantasy.</p>",
@@ -139,16 +128,14 @@
       "<img src='/img/works/09/sub01.webp'/>",
       "<img src='/img/works/09/sub02.webp'/>",
       "<img src='/img/works/09/9_1.gif'/>",
-      
 
       "<h3>PR Zone: SECRET GARDEN</h3>",
       "<p>In the Secret Garden, the use of diverse window patterns creates an illusion of expanded space. It presents a fantasy representation of what unfolds within a hidden garden.</p>",
-       "<vimeo id='https://vimeo.com/875531297'/>",
+      "<vimeo id='https://vimeo.com/875531297'/>",
       "<img src='/img/works/09/sub04.webp'/>",
       "<img src='/img/works/09/sub05.webp'/>",
       "<img src='/img/works/09/sub06.webp'/>",
       "<img src='/img/works/09/9_2.gif'/>",
-    
 
       "<h3>PR Zone: CLOUD</h3>",
       "<p>The Clouds in this zone symbolize the altitude of the 113th floor, dynamically transforming through time to create a fantastical representation of various cloud formations.</p>",
@@ -171,6 +158,7 @@
     "title": "MOBIS CES",
     "subtitle": "Hyundai Mobis CES Show 2023",
     "thumb_img": "/img/works/08/main_img.webp",
+    "thumb_m_img": "/img/works/08/main_img.webp",
     "main_img": "/img/works/08/main_img.webp",
     "hashtags": ["New_Media", "Interactive", "AR"],
     "head_desc": "ABOARD utilized Hyundai Mobis' cutting-edge urban mobility platform, M.Vision TO, to create immersive media content at CES 2023. This content offers visitors the opportunity to directly and effectively experience a wide array of future city environments.",
@@ -183,7 +171,7 @@
       "<img src='/img/works/08/3_1.gif'/>",
       "<h3>LED TRI - SCREEN : DRIVING FILM</h3>",
       "<p>We've created large LED tri-screen videos to provide an immersive experience of driving through a future city. These videos are seamlessly integrated with M.VISION TO vehicles to deliver a real-life, futuristic urban journey.</p>",
-      "<vimeo id='https://vimeo.com/875553839'/>",
+      "<vimeo id='https://vimeo.com/875553839' ratio='16.7'/>",
       "<img src='/img/works/08/sub01.webp'/>",
       "<img src='/img/works/08/sub02.webp'/>",
       "<img src='/img/works/08/sub03.webp'/>",
@@ -201,21 +189,20 @@
     ]
   },
 
-
   {
     "title": "STANDARD\nENERGY",
     "subtitle": "Lighting Control System",
     "thumb_img": "/img/works/07/main_img.webp",
+    "thumb_m_img": "/img/works/07/main_img.webp",
     "main_img": "/img/works/07/main_img.webp",
     "hashtags": ["Application", "Physical Interaction", "Lighting"],
-    "head_desc":"Linked with the charging system through indirect lighting that illuminates the charging booth. We have built a lighting control system that can intuitively recognize the amount of charge.",
+    "head_desc": "Linked with the charging system through indirect lighting that illuminates the charging booth. We have built a lighting control system that can intuitively recognize the amount of charge.",
     "content": [
-
       "<h3>Evolutionizing EV Charging Experience</h3>",
       "<p>At ABOARD, innovation meets sustainability with our groundbreaking project — a cutting-edge lighting system integrated into electric vehicle (EV) charging booths.</p>",
 
       "<img src='/img/works/07/sub01.webp'/>",
-      
+
       "<h3>Lighting Design</h3>",
       "<p>Based on Standard Energy’s unique colors By distinguishing between saturation and color, the charge amount can be intuitively recognized. Even when starting or ending charging and in unexpected event situations. We created a system to give messages indirectly.</p>",
 
@@ -226,8 +213,6 @@
       "<p>Displays information on the screen according to the current progress status. It was designed to be managed and controlled manually through mobile.</p>",
       "<img src='/img/works/07/sub04.webp'/>",
       "<img src='/img/works/07/sub05.webp'/>"
-
-
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide. ",
     "notes": [
@@ -238,22 +223,21 @@
     ]
   },
 
-
   {
     "title": "CLEANTOPIA",
     "subtitle": "Service App GUI Design",
     "thumb_img": "/img/works/06/landing_img.png",
+    "thumb_m_img": "/img/works/06/landing_img.png",
     "main_img": "/img/works/06/main_img.webp",
     "hashtags": ["UX Design", "UI Design"],
-    "head_desc":"Regarding the new collection & delivery service introduced by CLEANTOPIA. We carried out application UI/GUI design.",
+    "head_desc": "Regarding the new collection & delivery service introduced by CLEANTOPIA. We carried out application UI/GUI design.",
     "content": [
-
       "<h3>Collection, delivery and existing customers</h3>",
       "<p>We design UX based on our understanding of existing customer databases and logistics systems. So that new services such as collection and delivery can be used without difficulty.\nWe designed a UI that is customer-friendly and convenient.</p>",
 
       "<img src='/img/works/06/sub01.webp'/>",
       "<img src='/img/works/06/sub02.webp'/>",
-      
+
       "<h3>CLEANTOPIA BLACK</h3>",
       "<p>Cleantopia Black, a luxury line, is included in the overall UI guide. To be recognized as a service within a service and to feel the luxury of a luxury product.\nWe set the tone and manner and designed the content.</p>",
       "<img src='/img/works/06/sub03.webp'/>"
@@ -267,31 +251,25 @@
     ]
   },
 
-
-
   {
     "title": "AMWAY",
     "subtitle": "To Be Updated",
     "thumb_img": "/img/works/05/main_img05.png",
+    "thumb_m_img": "/img/works/05/main_img05.png",
     "hashtags": ["UX Design", "UI Design"],
 
-    "content": [
-      "<h3>To Be Updated</h3>"
-    ]
-
-
+    "content": ["<h3>To Be Updated</h3>"]
   },
-
 
   {
     "title": "MOBIS PLATFORM",
     "subtitle": "Hyundai Mobis B to B Service Platform",
     "thumb_img": "/img/works/04/main_img.webp",
+    "thumb_m_img": "/img/works/04/main_img.webp",
     "main_img": "/img/works/04/main_img.webp",
     "hashtags": ["UX Design", "UI Design"],
-    "head_desc":"MOBIS BUSINESS CONNECTION is a communication platform that helps smooth business with Mobis partners around the world. The platform was created to promote Mobis’ new news and products and provide a space to easily meet global customers online and promote business.",
+    "head_desc": "MOBIS BUSINESS CONNECTION is a communication platform that helps smooth business with Mobis partners around the world. The platform was created to promote Mobis’ new news and products and provide a space to easily meet global customers online and promote business.",
     "content": [
-
       "<p class='inner-container'>B to B business platforms targeting the world place ease of communication as the most important value. We designed UX so that Mobis' products and technology can be promoted smoothly to global customers, and interested customers can easily and conveniently hold meetings and conferences with the relevant person in charge.</p>",
 
       "<h3>Modular & Optimized</h3>",
@@ -300,8 +278,6 @@
       "<img src='/img/works/04/4_1.gif'/>",
       "<img src='/img/works/04/sub4_2.png'/>",
       "<img src='/img/works/04/sub4_3.png'/>"
-     
-      
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide. ",
     "notes": [
@@ -316,11 +292,11 @@
     "title": "MOBIS\nSHOWROOM",
     "subtitle": "Hyundai Mobis Virtual Showroom",
     "thumb_img": "/img/works/03/main_img.webp",
+    "thumb_m_img": "/img/works/03/main_img.webp",
     "main_img": "/img/works/03/main_img.webp",
     "hashtags": ["UX Design", "UI Design", "Development"],
-    "head_desc":"We worked on creating a virtual showroom to communicate Mobis' innovative technology and future vision with customers who cannot meet in person.",
+    "head_desc": "We worked on creating a virtual showroom to communicate Mobis' innovative technology and future vision with customers who cannot meet in person.",
     "content": [
-
       "<p class='inner-container'>Mobis' concept vehicles presented every year and new technologies applied to them. We have created a virtual space so that you can understand it intuitively.</p>",
 
       "<h3>Realistic Showroom</h3>",
@@ -329,9 +305,9 @@
       "<img src='/img/works/03/sub02.webp'/>",
       "<img src='/img/works/03/3_1.gif'/>",
       "<img src='/img/works/03/3_2.gif'/>",
-    
+
       "<img src='/img/works/03/sub03.webp'/>",
-      
+
       "<h3>Extension</h3>",
       "<p class='inner-container'>M. Vision series TO, HI, 2GO, and POP have all been expanded into a space so that they can all be gathered in one place to accommodate concept cars that are continuously being released.</p>",
       "<img src='/img/works/03/sub04.webp'/>"
@@ -344,17 +320,16 @@
       { "name": "Project Note.", "value": "UX/UI Design" }
     ]
   },
-    
+
   {
     "title": "LG DISPLAY",
     "subtitle": "LG Display Virtual Exhibition",
     "thumb_img": "/img/works/01/landing_img.png",
+    "thumb_m_img": "/img/works/01/landing_img.png",
     "main_img": "/img/works/01/main_img.webp",
     "hashtags": ["UX Design", "UI Design", "Development"],
-    "head_desc":"WAt CES2021, which was held as an all digital exhibition, LG Display's Virtual Showroom was created to meet global customers online.",
+    "head_desc": "WAt CES2021, which was held as an all digital exhibition, LG Display's Virtual Showroom was created to meet global customers online.",
     "content": [
-
-
       "<h3>On - Off Line Exhibition</h3>",
       "<p>The showroom to be installed at Science Park has been moved online. To enable customers who were unable to visit the site and overseas customers to experience a sense of reality. The content has been organized.</p>",
       "<img src='/img/works/01/sub01.webp'/>",
@@ -362,7 +337,6 @@
       "<img src='/img/works/01/1_1.gif'/>",
       "<img src='/img/works/01/1_2.gif'/>",
       "<img src='/img/works/01/sub03.webp'/>"
-      
     ],
     "foot_desc": "Redefining Design, Bridging the Digital and Physical Divide. ",
     "notes": [
@@ -372,7 +346,4 @@
       { "name": "Project Note.", "value": "UX/UI Design" }
     ]
   }
-
-
-
 ]
