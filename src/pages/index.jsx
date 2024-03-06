@@ -1,3 +1,4 @@
+import { navigate, useLocation } from "gatsby"
 import gsap, { Power2 } from "gsap"
 import * as React from "react"
 import "../assets/css/page.main.scss"
@@ -21,6 +22,12 @@ const IndexPage = () => {
     window.addEventListener("resize", handleResize)
     init()
     initWorkDetail()
+
+    const queryParams = new URLSearchParams(window.location.search)
+    const workId = queryParams.get("workId")
+    if (workId) {
+      showPopup(WORK_LIST.length - workId)
+    }
 
     return () => {
       window.removeEventListener("resize", handleResize)
@@ -186,6 +193,8 @@ const IndexPage = () => {
       return
     }
 
+    navigate("?workId=" + (WORK_LIST.length - index))
+
     projectIdxRef.current = index
 
     document.querySelector(".work-detail-page .container").innerHTML = ""
@@ -284,6 +293,7 @@ const IndexPage = () => {
 
   function initWorkDetail() {
     document.querySelector(".btn-close").addEventListener("click", function () {
+      navigate("/")
       gsap.to(".work-detail-page", {
         opacity: 0,
         onComplete: () => {
