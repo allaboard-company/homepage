@@ -193,7 +193,7 @@ const IndexPage = () => {
       return
     }
 
-    navigate("?workId=" + (WORK_LIST.length - index))
+    navigate("/?workId=" + (WORK_LIST.length - index))
 
     projectIdxRef.current = index
 
