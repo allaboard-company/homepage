@@ -15,7 +15,7 @@ import WORK_LIST from "../../static/data/works.json"
 const IndexPage = () => {
   const [title1, setTitle1] = React.useState("")
   const [title2, setTitle2] = React.useState("")
-  let projectIdx = 0
+  const projectIdxRef = React.useRef(0)
 
   React.useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -185,9 +185,10 @@ const IndexPage = () => {
     if (!data) {
       return
     }
-    document.querySelector(".work-detail-page .container").innerHTML = ""
 
-    projectIdx = index
+    projectIdxRef.current = index
+
+    document.querySelector(".work-detail-page .container").innerHTML = ""
 
     const {
       title,
@@ -234,7 +235,12 @@ const IndexPage = () => {
               return ""
             }
 
-            return `<div class="video-wrap">${createVimeoEmbedString(
+            let ratio = extractAttributeValue(item, "ratio")
+            if (!ratio) {
+              ratio = 28
+            }
+
+            return `<div class="video-wrap" style="padding-top:${ratio}%">${createVimeoEmbedString(
               vimeoId
             )}</div>`
           }
@@ -288,11 +294,11 @@ const IndexPage = () => {
     })
 
     document.querySelector(".btn-left").addEventListener("click", function () {
-      showPopup(projectIdx - 1)
+      showPopup(projectIdxRef.current - 1)
     })
 
     document.querySelector(".btn-right").addEventListener("click", function () {
-      showPopup(projectIdx + 1)
+      showPopup(projectIdxRef.current + 1)
     })
   }
 
@@ -351,9 +357,15 @@ const IndexPage = () => {
             return (
               <SwiperSlide>
                 <div
-                  className="bg-img"
+                  className="bg-img pc-only"
                   style={{
                     background: `url("${item["thumb_img"]}")`,
+                  }}
+                ></div>
+                <div
+                  className="bg-img mo-only"
+                  style={{
+                    background: `url("${item["thumb_m_img"]}")`,
                   }}
                 ></div>
                 <p className="title">${item["title"]}</p>
